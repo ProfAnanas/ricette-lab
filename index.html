@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmi di Laboratorio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Algoritmi di laboratorio</h1>
+        
+        <div id="pannello-controllo">
+            <input type="text" id="campo-ricerca" placeholder="Cerca tecnica o ricetta (es. brunoise, frolla)...">
+            
+            <select id="filtro-anno">
+                <option value="tutti">Tutti gli anni</option>
+                <option value="1">Classe prima</option>
+                <option value="2">Classe seconda</option>
+                <option value="3">Classe terza</option>
+                <option value="4">Classe quarta</option>
+                <option value="5">Classe quinta</option>
+            </select>
+        </div>
+    </header>
+
+    <main>
+        <section id="griglia-menu">
+            </section>
+
+       <section id="vista-ricetta" style="display: none;">
+            
+            <div id="testata-ricetta">
+                <button id="pulsante-indietro" onclick="chiudiAlgoritmo()">Torna al menu</button>
+                <h2 id="titolo-ricetta-corrente"></h2>
+                <button id="pulsante-toggle-vista" onclick="cambiaVista()">Mostra algoritmo</button>
+            </div>
+            
+            <div id="plancia-doppia">
+                
+                <div id="pannello-testo">
+                    <h3>Ingredienti</h3>
+                    <ul id="lista-ingredienti">
+                        </ul>
+                    
+                    <h3>Procedimento</h3>
+                    <div id="lista-procedimento">
+                        </div>
+                </div>
+                
+                <div id="pannello-algoritmo">
+                    </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

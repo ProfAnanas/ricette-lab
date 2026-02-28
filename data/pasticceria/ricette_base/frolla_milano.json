@@ -1,0 +1,25 @@
+{
+  "id": "frolla_milano",
+  "titolo": "Pasta frolla Milano (metodo classico)",
+  "ingredienti": [
+    "250 g Farina debole",
+    "125 g Burro",
+    "125 g Zucchero",
+    "50 g Uova",
+    "Aromi a piacere: vaniglia, scorza di agrumi"
+  ],
+  "procedimento": [
+    { "step_id": "step-1", "testo": "Impastare il burro a pomata con lo zucchero", "icona": "foglia" },
+    { "step_id": "step-2", "testo": "Unire le uova poco per volta", "icona": "aggiungere" },
+    { "step_id": "step-3", "testo": "Aggiungere la farina in due volte.", "icona": "aggiungere" },
+    { "step_id": "step-4", "testo": "Stendere a uno spessore di 5mm tra due fogli di carta da forno", "icona": "mattarello", "dimensione": "5 mm"},
+    { "step_id": "step-5", "testo": "Mettere a riposare in frigorifero per 2 ore.", "icona":"frigorifero", "tempo": "2 ore" },
+    { "step_id": "step-6", "testo": "Dare alla frolla la forma desiderata.", "icona":"forma" },
+    { "step_id": "step-7", "testo": "Cuocere a 160-170°C", "icona": "forno_statico", "temperatura": "160-170°C" },
+    { "tipo": "bivio", "rami": [
+        { "step_id": "step-8a", "testo": "Un biscotto cuoce in 8-10 minuti.", "testo_nodo": "Biscotti", "tempo": "8-10 min"},
+        { "step_id": "step-8b", "testo": "Un fondo di crostata cuoce in bianco 14-16 minuti.", "testo_nodo": "Fondo crostata", "tempo": "14-16 min"}
+      ]
+    }
+  ]
+}
