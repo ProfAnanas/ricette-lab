@@ -473,89 +473,76 @@ body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) .numero-step {
 
 /* --- COLORI DINAMICI DEI NODI --- */
 
-/* Normale (Grigio) - Regola di default se non ci sono classi specifiche */
+/* Normale (Grigio) - Solo bordo di base */
 .nodo-visivo, .nodo-visivo.tipo-normale {
     border-color: #bdc3c7;
+    background-color: #ffffff; /* Sfondo bianco per massima pulizia */
+    color: #2c3e50;
 }
+
+/* Quando il nodo grigio è attivo/selezionato */
 .nodo-visivo.nodo-attivo, .nodo-visivo.tipo-normale.nodo-attivo {
-    background-color: #95a5a6;
-    color: white;
+    background-color: #f2f2f2; /* Grigio molto chiaro, tipo fumo */
+    border-color: #95a5a6;     /* Bordo leggermente più scuro per dare profondità */
+    color: #2c3e50;            /* Testo scuro per non perdere contrasto */
 }
 
-/* Frigorifero (Azzurro) */
-.nodo-visivo.tipo-frigorifero {
-    border-color: #3498db;
-    background-color: #f0f8fd;
-}
-.nodo-visivo.tipo-frigorifero.nodo-attivo {
-    background-color: #3498db;
-    color: white;
-}
-
-/* Gelo / Abbattitore (Blu scuro) */
-.nodo-visivo.tipo-gelo {
-    border-color: #2980b9;
-    background-color: #ebf5fb;
-}
-.nodo-visivo.tipo-gelo.nodo-attivo {
-    background-color: #2980b9;
-    color: white;
-}
-
-/* Forno / Cottura (Rosso) */
-.nodo-visivo.tipo-forno {
-    border-color: #e74c3c;
-    background-color: #fdf2f0;
-}
-.nodo-visivo.tipo-forno.nodo-attivo {
-    background-color: #e74c3c;
-    color: white;
-}
-
-/* Planetaria (Verde per foglia, frusta e gancio) */
-.nodo-visivo.tipo-foglia,
-.nodo-visivo.tipo-frusta,
-.nodo-visivo.tipo-gancio {
+/* --- CATEGORIA VERDE (Planetaria E Mescolamento) --- */
+.nodo-visivo.tipo-foglia, .nodo-visivo.tipo-frusta, .nodo-visivo.tipo-gancio, 
+.nodo-visivo.tipo-mescolare, .nodo-visivo.tipo-montare {
     border-color: #2ecc71;
     background-color: #f0fbf4;
 }
-.nodo-visivo.tipo-foglia.nodo-attivo,
-.nodo-visivo.tipo-frusta.nodo-attivo,
-.nodo-visivo.tipo-gancio.nodo-attivo {
+.nodo-visivo.tipo-foglia.nodo-attivo, .nodo-visivo.tipo-frusta.nodo-attivo, 
+.nodo-visivo.tipo-gancio.nodo-attivo, .nodo-visivo.tipo-mescolare.nodo-attivo, 
+.nodo-visivo.tipo-montare.nodo-attivo {
     background-color: #2ecc71;
     color: white;
 }
 
-/* Lame / Emulsioni (Giallo per pimer e frullare) */
-.nodo-visivo.tipo-pimer,
-.nodo-visivo.tipo-frullare {
-    border-color: #f1c40f;
-    background-color: #fef9e7;
+/* --- CATEGORIA AZZURRO (Freddo) --- */
+.nodo-visivo.tipo-abbattitore, .nodo-visivo.tipo-frigorifero {
+    border-color: #3498db;
+    background-color: #f0f8fd;
 }
-.nodo-visivo.tipo-pimer.nodo-attivo,
-.nodo-visivo.tipo-frullare.nodo-attivo {
-    background-color: #f1c40f;
-    color: #2c3e50; /* Testo scuro per garantire la leggibilità sul giallo */
-}
-
-/* Pentola / Fuoco (Arancione) */
-.nodo-visivo.tipo-pentola {
-    border-color: #e67e22;
-    background-color: #fdf3e9;
-}
-.nodo-visivo.tipo-pentola.nodo-attivo {
-    background-color: #e67e22;
+.nodo-visivo.tipo-abbattitore.nodo-attivo, .nodo-visivo.tipo-frigorifero.nodo-attivo {
+    background-color: #3498db;
     color: white;
 }
 
-/* Riposo (Rosa) */
-.nodo-visivo.tipo-riposo {
+/* --- CATEGORIA ROSA (Lievitazione) --- */
+.nodo-visivo.tipo-lievitazione {
     border-color: #fd79a8;
     background-color: #ffeff5;
 }
-.nodo-visivo.tipo-riposo.nodo-attivo {
+.nodo-visivo.tipo-lievitazione.nodo-attivo {
     background-color: #fd79a8;
     color: white;
+}
+
+/* --- CATEGORIA ROSSO (Calore E Cottura) --- */
+.nodo-visivo.tipo-forno_statico, .nodo-visivo.tipo-forno_vapore, 
+.nodo-visivo.tipo-forno_ventilato, .nodo-visivo.tipo-padella, 
+.nodo-visivo.tipo-pentola_alta, .nodo-visivo.tipo-pentolino {
+    border-color: #e74c3c;
+    background-color: #fdf2f0;
+}
+.nodo-visivo.tipo-forno_statico.nodo-attivo, .nodo-visivo.tipo-forno_vapore.nodo-attivo, 
+.nodo-visivo.tipo-forno_ventilato.nodo-attivo, .nodo-visivo.tipo-padella.nodo-attivo, 
+.nodo-visivo.tipo-pentola_alta.nodo-attivo, .nodo-visivo.tipo-pentolino.nodo-attivo {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* --- CATEGORIA GIALLO (Taglio Ed Emulsione) --- */
+.nodo-visivo.tipo-pimer, .nodo-visivo.tipo-mixer, .nodo-visivo.tipo-tagliare {
+    border-color: #f1c40f;
+    background-color: #fef9e7;
+}
+.nodo-visivo.tipo-pimer.nodo-attivo, .nodo-visivo.tipo-mixer.nodo-attivo, 
+.nodo-visivo.tipo-tagliare.nodo-attivo {
+    background-color: #f1c40f;
+    color: #2c3e50; /* Testo scuro per leggibilità sul giallo */
 }
 
 .testo-nodo-alternativo {
