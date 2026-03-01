@@ -46,6 +46,11 @@ function disegnaGrigliaMenu(catalogo) {
                 const bottone = document.createElement('button');
                 bottone.textContent = ricetta.nome;
                 bottone.classList.add('btn-ricetta');
+                
+                // INSERIMENTO PER IL FILTRO: Assegna l'anno letto dal JSON (se non c'è, mette 'tutti')
+                bottone.setAttribute('data-anno', ricetta.anno || 'tutti');
+                bottone.setAttribute('data-tag', ricetta.tag || '');
+                
                 bottone.onclick = () => apriAlgoritmo(ricetta.id, ricetta.url_dati, ricetta.nome);
                 divRicette.appendChild(bottone);
             });
@@ -71,6 +76,7 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
     // Rimettiamo a posto anche il testo del pulsante, per sicurezza
     const btnToggle = document.getElementById('pulsante-toggle-vista');
     if (btnToggle) btnToggle.textContent = 'Mostra algoritmo';
+    
     try {
         const response = await fetch(urlDati);
         if (!response.ok) throw new Error('File ricetta non trovato');
@@ -137,42 +143,73 @@ function chiudiAlgoritmo() {
 // (Funzioni Specializzate Di Supporto)
 
 function creaTestoSinistra(dati) {
+    // Contenitore principale della riga
     const stepContainer = document.createElement('div');
     stepContainer.classList.add('step-ricetta');
-    stepContainer.id = dati.step_id;
-    
-    // Creiamo il contenitore per il numero
+
+    // 1. Creiamo subito il numero e il testo (così il checkbox li "vede")
     const numeroStep = document.createElement('div');
     numeroStep.classList.add('numero-step');
-    numeroStep.textContent = dati.step_id.replace('step-', ''); // Estrae solo il numero/lettera
-    
-    // Creiamo il contenitore per il testo
+    numeroStep.textContent = dati.step_id.replace('step-', '');
+
     const testoStep = document.createElement('div');
     testoStep.classList.add('testo-step');
     testoStep.textContent = dati.testo;
-    
-    // Li assembliamo
+
+    // 2. Creiamo il checkbox
+    const divCheck = document.createElement('div');
+    divCheck.classList.add('contenitore-check');
+
+    const checkStep = document.createElement('input');
+    checkStep.type = 'checkbox';
+    checkStep.id = 'check-' + dati.step_id; 
+    checkStep.classList.add('checkbox-stato-step');
+    checkStep.setAttribute('aria-label', `Segna step ${dati.step_id.replace('step-','')} come completato`);
+
+    // 3. La logica del click sul checkbox
+    checkStep.addEventListener('change', () => {
+        const nodoVisivoTarget = document.getElementById('nodo-' + dati.step_id);
+        
+        if (checkStep.checked) {
+            // Step fatto: barra il testo e spegne il numero
+            testoStep.classList.add('testo-barrato');
+            numeroStep.classList.add('numero-barrato');
+            
+            // Dimmera il nodo a destra
+            if (nodoVisivoTarget) {
+                nodoVisivoTarget.classList.add('nodo-completato');
+            }
+        } else {
+            // Step non fatto: toglie la riga e riaccende il numero
+            testoStep.classList.remove('testo-barrato');
+            numeroStep.classList.remove('numero-barrato');
+            
+            if (nodoVisivoTarget) {
+                nodoVisivoTarget.classList.remove('nodo-completato');
+            }
+        }
+    });
+
+    divCheck.appendChild(checkStep);
+
+    // 4. Assembliamo la riga nell'ordine corretto da sinistra a destra
+    stepContainer.appendChild(divCheck);
     stepContainer.appendChild(numeroStep);
     stepContainer.appendChild(testoStep);
 
-// Gestiamo il click sul numero per far comparire il testo a sovrapposizione
+    // 5. Gestione dei popup quando si clicca sul numero o sul testo
     numeroStep.addEventListener('click', (evento) => {
-        // Funziona solo se siamo in modalità algoritmo
         if (document.body.classList.contains('modalita-algoritmo')) {
-            // Impedisce che il click faccia scorrere la pagina a caso
             evento.stopPropagation(); 
             
-            // Chiude tutti gli altri testi eventualmente aperti
             document.querySelectorAll('.mostra-testo-popup').forEach(el => {
                 if(el !== testoStep) el.classList.remove('mostra-testo-popup');
             });
             
-            // Accende o spegne il testo di questo specifico step
             testoStep.classList.toggle('mostra-testo-popup');
         }
     });
 
-    // Cliccando sul testo stesso, il popup scompare (deve stare FUORI dal precedente)
     testoStep.addEventListener('click', (evento) => {
         if (document.body.classList.contains('modalita-algoritmo')) {
             evento.stopPropagation();
@@ -213,7 +250,7 @@ function creaNodoDestra(dati) {
         divNodo.appendChild(testoPlaceholder);
     }
 
-// Gestione dei parametri (Temperatura, Tempo, Dimensione)
+    // Gestione dei parametri (Temperatura, Tempo, Dimensione)
     if (dati.temperatura || dati.tempo || dati.dimensione) {
         const divParametri = document.createElement('div');
         divParametri.classList.add('pannello-parametri');
@@ -235,7 +272,6 @@ function creaNodoDestra(dati) {
         if (dati.dimensione) {
             const badgeDim = document.createElement('span');
             badgeDim.classList.add('badge-parametro', 'badge-dim');
-            // Usiamo il righello come avevi chiesto
             badgeDim.textContent = `📏 ${dati.dimensione}`;
             divParametri.appendChild(badgeDim);
         }
@@ -261,7 +297,6 @@ function attivaSincronia(testo, nodo) {
     nodo.addEventListener('mouseenter', () => {
         nodo.classList.add('nodo-attivo');
         testo.classList.add('evidenziato');
-        // Fa scorrere la colonna sinistra per mantenere allineato il numero
         testo.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     });
     
@@ -272,20 +307,16 @@ function attivaSincronia(testo, nodo) {
 
     // IL NUOVO EVENTO: Clic sul nodo visivo
     nodo.addEventListener('click', (evento) => {
-        // Interveniamo solo se siamo nella plancia di destra
         if (document.body.classList.contains('modalita-algoritmo')) {
             evento.stopPropagation();
             
-            // Andiamo a pescare il div del testo specifico dentro il contenitore di sinistra
             const testoStep = testo.querySelector('.testo-step');
             
             if (testoStep) {
-                // Chiudiamo gli altri pop-up per mantenere l'interfaccia in ordine
                 document.querySelectorAll('.mostra-testo-popup').forEach(el => {
                     if (el !== testoStep) el.classList.remove('mostra-testo-popup');
                 });
                 
-                // Evoca (o nasconde) il testo associato a questo nodo
                 testoStep.classList.toggle('mostra-testo-popup');
             }
         }
@@ -301,10 +332,109 @@ function cambiaVista() {
     body.classList.toggle('modalita-algoritmo');
 
     if (body.classList.contains('modalita-algoritmo')) {
-        btn.textContent = 'Mostra testo completo';
+        btn.textContent = 'Ricetta testuale';
     } else {
         btn.textContent = 'Mostra algoritmo';
         // Chiude eventuali popup di testo rimasti aperti
         document.querySelectorAll('.mostra-testo-popup').forEach(el => el.classList.remove('mostra-testo-popup'));
     }
+}
+
+// --- FUNZIONE SCHERMO SEMPRE ON (Wake Lock API) ---
+let wakeLock = null;
+const btnWakeLock = document.getElementById('btn-wake-lock');
+
+if (btnWakeLock) {
+    btnWakeLock.addEventListener('click', async () => {
+        if (!wakeLock) {
+            try {
+                wakeLock = await navigator.wakeLock.request('screen');
+                btnWakeLock.classList.add('attivo');
+                btnWakeLock.textContent = '☀️ Schermo: SEMPRE ACCESO';
+
+                wakeLock.addEventListener('release', () => {
+                    wakeLock = null;
+                    btnWakeLock.classList.remove('attivo');
+                    btnWakeLock.textContent = '🌙 Schermo: NORMALE';
+                });
+            } catch (err) {
+                console.error('Errore Wake Lock:', err.name, err.message);
+                alert('Il tuo browser o dispositivo non supporta il blocco dello schermo, oppure la batteria è in risparmio energetico estremo.');
+            }
+        } else {
+            await wakeLock.release();
+            wakeLock = null;
+            btnWakeLock.classList.remove('attivo');
+            btnWakeLock.textContent = '🌙 Schermo: NORMALE';
+        }
+    });
+}
+
+// --- GESTIONE RICERCA E FILTRO ANNUALITÀ ---
+const campoRicerca = document.getElementById('campo-ricerca');
+const filtroAnno = document.getElementById('filtro-anno');
+
+function applicaFiltri() {
+    const testoCercato = campoRicerca.value.toLowerCase();
+    const annoSelezionato = filtroAnno.value;
+
+    // 1. Filtra i singoli pulsanti delle ricette
+    const bottoniRicette = document.querySelectorAll('.btn-ricetta');
+    
+    bottoniRicette.forEach(bottone => {
+        const nomeRicetta = bottone.textContent.toLowerCase();
+        // Recupera l'anno e i tag che abbiamo nascosto nel bottone
+        const annoRicetta = bottone.getAttribute('data-anno');
+        const tagRicetta = (bottone.getAttribute('data-tag') || '').toLowerCase();
+        
+        // Verifica se il testo digitato è contenuto nel nome OPPURE nei tag
+        const corrispondeTesto = nomeRicetta.includes(testoCercato) || tagRicetta.includes(testoCercato);
+        
+        // Verifica se l'anno corrisponde
+        let corrispondeAnno = false;
+        if (annoSelezionato === 'tutti') {
+            corrispondeAnno = true;
+        } else if (annoRicetta && (annoRicetta.includes(annoSelezionato) || annoRicetta === 'tutti')) {
+            corrispondeAnno = true;
+        }
+
+        // Accende o spegne il bottone della singola ricetta
+        if (corrispondeTesto && corrispondeAnno) {
+            bottone.style.display = 'block';
+        } else {
+            bottone.style.display = 'none';
+        }
+    });
+
+    // 2. Nasconde le sottocategorie se sono vuote
+    document.querySelectorAll('.blocco-sottocategoria').forEach(sottocategoria => {
+        const bottoniVisibili = Array.from(sottocategoria.querySelectorAll('.btn-ricetta'))
+                                     .filter(b => b.style.display !== 'none');
+        
+        if (bottoniVisibili.length === 0) {
+            sottocategoria.style.display = 'none';
+        } else {
+            sottocategoria.style.display = 'block';
+        }
+    });
+
+    // 3. Nasconde le categorie principali se sono vuote
+    document.querySelectorAll('.blocco-categoria').forEach(categoria => {
+        const bottoniVisibili = Array.from(categoria.querySelectorAll('.btn-ricetta'))
+                                     .filter(b => b.style.display !== 'none');
+        
+        if (bottoniVisibili.length === 0) {
+            categoria.style.display = 'none';
+        } else {
+            categoria.style.display = 'block';
+        }
+    });
+}
+
+// Colleghiamo i sensori per far scattare la funzione in tempo reale
+if (campoRicerca) {
+    campoRicerca.addEventListener('input', applicaFiltri); 
+}
+if (filtroAnno) {
+    filtroAnno.addEventListener('change', applicaFiltri); 
 }

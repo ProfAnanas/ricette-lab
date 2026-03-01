@@ -1,4 +1,8 @@
 /* Stili di base e reset con font accessibile */
+* {
+    box-sizing: border-box; /* Regola d'oro: impedisce agli elementi di sbordare */
+}
+
 body {
     font-family: 'Lexend', Verdana, sans-serif;
     background-color: #f4f7f6;
@@ -6,7 +10,6 @@ body {
     margin: 0;
     padding: 20px;
     line-height: 1.6;
-    /* Aumentiamo leggermente la spaziatura tra le lettere, aiuta moltissimo la lettura */
     letter-spacing: 0.3px; 
 }
 
@@ -24,9 +27,12 @@ h1 {
 #pannello-controllo {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Permette agli elementi di andare a capo se non c'è spazio */
     gap: 15px;
     max-width: 600px;
     margin: 0 auto;
+    width: 100%;
+    padding: 0 15px; /* Evita che la barra di ricerca tocchi i bordi del display */
 }
 
 #campo-ricerca, #filtro-anno {
@@ -37,7 +43,20 @@ h1 {
 }
 
 #campo-ricerca {
-    flex-grow: 1; /* Fa allargare la barra di ricerca il più possibile */
+    flex-grow: 1;
+}
+
+/* Regola per gli schermi degli smartphone (Sotto I 600px) */
+@media (max-width: 600px) {
+    #pannello-controllo {
+        flex-direction: column; /* Impila ricerca, menu e bottone in verticale */
+        align-items: stretch;
+    }
+
+    #campo-ricerca, #filtro-anno, #btn-wake-lock {
+        width: 100%; /* Ogni elemento prende tutta la riga a disposizione */
+        margin: 0;
+    }
 }
 
 /* Stile per i menu a tendina delle categorie */
@@ -57,21 +76,16 @@ summary {
     cursor: pointer;
     border-bottom: 1px solid #eee;
     transition: background-color 0.2s;
+    list-style-position: inside;
 }
 
 summary:hover {
     background-color: #f9fafc;
 }
 
-/* Rimuove la freccina standard su Safari/Chrome se si vuole personalizzare, ma per ora la lasciamo */
-summary {
-    list-style-position: inside;
-}
-
 /* Griglia dei pulsanti delle ricette */
 .lista-ricette {
     display: grid;
-    /* Questa riga crea colonne flessibili che si adattano allo schermo */
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 15px;
     padding: 20px;
@@ -94,10 +108,11 @@ summary {
     background-color: #3498db;
     color: white;
     border-color: #3498db;
-    transform: translateY(-2px); /* Piccolo effetto di sollevamento al passaggio del mouse */
+    transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
 }
-/* (Stile Per Le Sottocategorie Annidate) */
+
+/* Sottocategorie Annidate */
 .blocco-sottocategoria {
     margin: 10px 20px;
     border-left: 3px solid #3498db;
@@ -117,14 +132,17 @@ summary {
     color: #3498db;
 }
 
-/* Struttura della testata della ricetta */
+/* Struttura della testata della ricetta (MODIFICATA: Titolo in alto, tasti sotto) */
 #testata-ricetta {
     display: flex;
-    align-items: center;
-    gap: 20px;
+    flex-direction: column; /* Impila gli elementi in verticale */
+    align-items: center;    /* Centra tutto */
+    text-align: center;
+    gap: 15px;
     margin-bottom: 20px;
     padding-bottom: 15px;
     border-bottom: 2px solid #e1e8ed;
+    width: 100%;
 }
 
 #pulsante-indietro {
@@ -146,8 +164,8 @@ summary {
 /* La plancia divisa a metà */
 #plancia-doppia {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Divide esattamente lo spazio al 50% e 50% */
-    gap: 30px; /* Spazio vuoto tra la colonna di sinistra e quella di destra */
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
     align-items: start;
 }
 
@@ -157,7 +175,6 @@ summary {
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    /* Se il testo è troppo lungo, crea una barra di scorrimento interna */
     max-height: 75vh; 
     overflow-y: auto;
 }
@@ -174,33 +191,70 @@ summary {
     font-size: 16px;
 }
 
-/* Stile per i passaggi del procedimento */
+/* Rimodelliamo la riga del procedimento in modalità normale (MODIFICATA PER CHECKBOX) */
 .step-ricetta {
+    display: flex; 
+    align-items: center; /* Allinea perfettamente al centro numero, checkbox e testo */
+    gap: 10px;
     padding: 12px;
     margin-bottom: 10px;
     border-left: 4px solid #bdc3c7;
     background-color: #f9fbfc;
     border-radius: 0 6px 6px 0;
-    transition: all 0.3s ease;
+    position: relative;
+    width: 100%;
+}
+
+/* --- NUOVE CLASSI PER IL CHECKBOX --- */
+.contenitore-check {
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.checkbox-stato-step {
+    margin: 0;
+    width: 18px;
+    height: 18px;
     cursor: pointer;
 }
 
-/* Questo è l'effetto che useremo quando passeremo il mouse sul testo o sul nodo */
+/* Il badge circolare del numero */
+.numero-step {
+    background-color: #2c3e50;
+    color: white;
+    min-width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.testo-step {
+    padding-top: 0; /* Rimossa spaziatura extra, ora è allineato al centro dal flexbox */
+}
+
+/* Hover base su riga normale */
 .step-ricetta.evidenziato, .step-ricetta:hover {
     border-left-color: #f39c12;
     background-color: #fff8e1;
     transform: translateX(5px);
+    transition: all 0.3s ease;
 }
 
 /* Regola per gli schermi piccoli (smartphone degli alunni a casa) */
 @media (max-width: 900px) {
     #plancia-doppia {
-        /* Quando lo schermo è piccolo, impila i pannelli uno sopra l'altro */
         grid-template-columns: 1fr; 
     }
-    
     #pannello-testo, #pannello-algoritmo {
-        max-height: none; /* Disattiva lo scorrimento interno su mobile */
+        max-height: none; 
     }
 }
 
@@ -208,7 +262,7 @@ summary {
 .nodo-visivo {
     background-color: #ffffff;
     border: 2px solid #e1e8ed;
-    border-radius: 12px; /* Angoli più arrotondati rispetto a prima */
+    border-radius: 12px;
     padding: 15px;
     margin-bottom: 20px;
     text-align: center;
@@ -220,7 +274,7 @@ summary {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.03); /* Ombra leggerissima e moderna */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.03);
 }
 
 /* La linea che collega un nodo all'altro (tranne l'ultimo) */
@@ -252,24 +306,21 @@ summary {
     margin-bottom: 12px;
 }
 
-/* Regole ferree per le dimensioni delle icone SVG */
 .icona-principale img {
-    width: 48px; /* Larghezza fissa */
-    height: 48px; /* Altezza fissa */
-    object-fit: contain; /* Evita che l'immagine si deformi o si schiacci */
-    /* Assicurati che le tue icone SVG non abbiano uno sfondo bianco incorporato, 
-       ma siano trasparenti, così prenderanno il colore di sfondo del nodo! */
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
 }
 
-/* Contenitore flessibile per allineare i badge dei parametri */
+/* Badge dei parametri */
 .pannello-parametri {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 12px;
+    flex-wrap: wrap; /* Manda a capo se stretto */
 }
 
-/* Stile universale per i badge */
 .badge-parametro {
     font-size: 13px;
     padding: 4px 8px;
@@ -278,9 +329,9 @@ summary {
     display: inline-flex;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    white-space: nowrap;
 }
 
-/* Colori specifici per differenziare a colpo d'occhio */
 .badge-temp {
     background-color: #ffeaa7;
     color: #d35400;
@@ -293,32 +344,63 @@ summary {
     border: 1px solid #00cec9;
 }
 
+.badge-dim {
+    background-color: #f1f2f6;
+    color: #2f3542;
+    border: 1px solid #ced4da;
+}
+
+/* --- BIVI E RAMIFICAZIONI --- */
+
 /* Contenitore per i bivi affiancati a destra */
 .contenitore-bivio-visivo {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 10px; /* Ridotto leggermente per recuperare spazio prezioso */
     margin-bottom: 20px;
-    width: 90%; 
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%; /* Sfruttiamo tutta la larghezza della colonna */
 }
 
 /* Restringe i nodi del ramo per farli stare sulla stessa riga */
 .nodo-ramo {
-    width: 100%; /* Prende il 50% dello spazio nel flex container */
+    flex: 1; /* Forza i rami a dividersi lo spazio esattamente a metà */
+    min-width: 0; /* TRUCCO FONDAMENTALE: Impedisce al nodo di allargarsi oltre il genitore, forzando il testo a capo */
     margin-bottom: 0;
-    border-style: dashed; /* Un bordo tratteggiato indica l'alternativa */
+    border-style: dashed;
+    padding: 10px 5px; /* Imbottitura più snella */
+    font-size: 14px; /* Riduciamo leggermente il font per i bivi */
+}
+
+/* Salvagente per gli schermi degli smartphone (sotto i 450px) */
+@media (max-width: 450px) {
+    .contenitore-bivio-visivo {
+        flex-direction: column; /* Quando non c'è più spazio, li impila in verticale */
+        align-items: center;
+    }
+    
+    .nodo-ramo {
+        width: 90%; /* Occupa quasi tutta la larghezza da impilato */
+        margin-bottom: 15px; /* Crea spazio tra un bivio e l'altro */
+    }
+    
+    .nodo-ramo:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.nodo-ramo {
+    width: 100%;
+    margin-bottom: 0;
+    border-style: dashed;
 }
 
 /* Stile per il testo del bivio a sinistra */
 .blocco-bivio-testo {
-    margin-left: 15px;
+    margin-left: 6px; /* <-- PRIMA ERA 15px. Abbassando questo, la linea va a sinistra */
     border-left: 2px dashed #bdc3c7;
-    padding-left: 15px;
+    padding-left: 12px; /* Spazio interno tra la linea tratteggiata e la casella di spunta */
 }
 
-/* Stile del pulsante toggle */
 #pulsante-toggle-vista {
     background-color: #f39c12;
     color: white;
@@ -328,64 +410,29 @@ summary {
     font-size: 16px;
     cursor: pointer;
     font-weight: bold;
-    margin-left: auto; /* Lo spinge tutto a destra */
+    margin-right: auto; /* PRIMA ERA margin-left: auto. Così lo spinge tutto a sinistra! */
 }
 
-/* Rimodelliamo la riga del procedimento in modalità normale */
-.step-ricetta {
-    display: flex; /* Mette numero e testo affiancati */
-    align-items: flex-start;
-    gap: 15px;
-    padding: 12px;
-    margin-bottom: 10px;
-    border-left: 4px solid #bdc3c7;
-    background-color: #f9fbfc;
-    border-radius: 0 6px 6px 0;
-    position: relative; /* Fondamentale per posizionare il popup dopo */
-}
-
-/* Il badge circolare del numero */
-.numero-step {
-    background-color: #2c3e50;
-    color: white;
-    min-width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-weight: bold;
-    flex-shrink: 0;
-    cursor: pointer;
-}
-
-.testo-step {
-    padding-top: 6px; /* Allinea il testo al centro del numero */
-}
 
 /* --- REGOLE PER LA MODALITÀ ALGORITMO --- */
 
-/* Di base, nascondiamo il pannello destro */
 #pannello-algoritmo {
     display: none;
 }
 
-/* Quando si attiva la modalità algoritmo, il pannello destro compare */
 body.modalita-algoritmo #pannello-algoritmo {
     display: block;
 }
 
-/* La plancia normale è una colonna singola (solo testo), in algoritmo si sdoppia ma la sinistra diventa strettissima */
 #plancia-doppia {
     grid-template-columns: 1fr; 
 }
 
 body.modalita-algoritmo #plancia-doppia {
-    grid-template-columns: 60px 1fr; /* 60px per i numeri, il resto per l'algoritmo */
+    grid-template-columns: 95px 1fr; /* Allargato da 60px a 95px per farci stare spunta e numero */
     gap: 15px;
 }
 
-/* In modalità algoritmo nascondiamo le liste di ingredienti e i testi per fare spazio */
 body.modalita-algoritmo #lista-ingredienti,
 body.modalita-algoritmo h3 {
     display: none;
@@ -395,57 +442,58 @@ body.modalita-algoritmo .step-ricetta {
     border-left: none;
     background-color: transparent;
     padding: 5px 0;
+    transform: none; /* Annulla l'effetto spostamento in questa modalità */
 }
 
 body.modalita-algoritmo .testo-step {
-    display: none; /* Nasconde il testo */
+    display: none; 
 }
 
-/* Il pannello di sinistra domina sul tabellone */
 body.modalita-algoritmo #pannello-testo {
+    padding: 20px 10px; /* Riduciamo l'imbottitura orizzontale a 10px per recuperare spazio prezioso */
     overflow: visible;
     position: relative;
     z-index: 100;
 }
 
-/* Forza lo step attivo in primissimo piano */
 body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) {
     position: relative;
     z-index: 1000;
 }
 
-/* Il popup che scavalca la colonna di destra */
+/* IL POPUP MODIFICATO (Anti-Sbordamento e Riposizionato) */
 body.modalita-algoritmo .testo-step.mostra-testo-popup {
     display: block;
     position: absolute;
-    left: 60px; /* Distanza dal numero */
-    top: -5px; /* Lo centra verticalmente rispetto al bottone numerico */
-    width: 320px; /* Abbastanza largo da coprire una parte dei nodi a destra */
+    left: 80px; /* Spostato più a destra rispetto a prima (era 55px) */
+    top: 50%;
+    transform: translateY(-50%);
+    
+    /* Regole salva-schermo per cellulari aggiornate al nuovo spazio */
+    max-width: calc(100vw - 110px);
+    width: max-content;
+    
+    /* ... il resto rimane uguale ... */
     background-color: #ffffff;
-    border-left: 5px solid #f39c12; /* Una linea di focus marcata */
-    padding: 15px 20px;
+    border-left: 5px solid #f39c12;
+    padding: 12px 15px;
     border-radius: 6px;
     box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-    z-index: 9999; /* Lo posiziona sopra a qualsiasi altra cosa */
-    cursor: pointer; /* Indica all'utente che può cliccarlo per chiudere */
-    
-    /* Attiva l'animazione di comparsa */
+    z-index: 9999; 
+    cursor: pointer; 
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
     animation: comparsaFluida 0.25s ease-out forwards;
 }
 
-/* Animazione fluida (fade e scivolamento) */
+/* Animazione aggiornata */
 @keyframes comparsaFluida {
-    from {
-        opacity: 0;
-        transform: translateX(-15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    from { opacity: 0; transform: translate(-15px, -50%); }
+    to { opacity: 1; transform: translate(0, -50%); }
 }
 
-/* Tutti i numeri tornano blu scuro di base, anche in modalità algoritmo */
 body.modalita-algoritmo .numero-step {
     background-color: #2c3e50; 
     color: white;
@@ -453,19 +501,8 @@ body.modalita-algoritmo .numero-step {
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-/* 1. Si accende di arancione quando passo il mouse sul numero stesso */
-body.modalita-algoritmo .numero-step:hover {
-    background-color: #f39c12;
-    border-color: #f39c12;
-}
-
-/* 2. Si accende di arancione in automatico quando il nodo a destra è attivo (sincronia) */
-body.modalita-algoritmo .step-ricetta.evidenziato .numero-step {
-    background-color: #f39c12;
-    border-color: #f39c12;
-}
-
-/* 3. (Opzionale ma molto utile) Resta arancione mentre il popup del testo è aperto */
+body.modalita-algoritmo .numero-step:hover,
+body.modalita-algoritmo .step-ricetta.evidenziato .numero-step,
 body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) .numero-step {
     background-color: #f39c12;
     border-color: #f39c12;
@@ -473,21 +510,19 @@ body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) .numero-step {
 
 /* --- COLORI DINAMICI DEI NODI --- */
 
-/* Normale (Grigio) - Solo bordo di base */
 .nodo-visivo, .nodo-visivo.tipo-normale {
     border-color: #bdc3c7;
-    background-color: #ffffff; /* Sfondo bianco per massima pulizia */
+    background-color: #ffffff; 
     color: #2c3e50;
 }
 
-/* Quando il nodo grigio è attivo/selezionato */
 .nodo-visivo.nodo-attivo, .nodo-visivo.tipo-normale.nodo-attivo {
-    background-color: #f2f2f2; /* Grigio molto chiaro, tipo fumo */
-    border-color: #95a5a6;     /* Bordo leggermente più scuro per dare profondità */
-    color: #2c3e50;            /* Testo scuro per non perdere contrasto */
+    background-color: #f2f2f2; 
+    border-color: #95a5a6; 
+    color: #2c3e50; 
 }
 
-/* --- CATEGORIA VERDE (Planetaria E Mescolamento) --- */
+/* Categoria Verde */
 .nodo-visivo.tipo-foglia, .nodo-visivo.tipo-frusta, .nodo-visivo.tipo-gancio, 
 .nodo-visivo.tipo-mescolare, .nodo-visivo.tipo-montare {
     border-color: #2ecc71;
@@ -500,7 +535,7 @@ body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) .numero-step {
     color: white;
 }
 
-/* --- CATEGORIA AZZURRO (Freddo) --- */
+/* Categoria Azzurro */
 .nodo-visivo.tipo-abbattitore, .nodo-visivo.tipo-frigorifero {
     border-color: #3498db;
     background-color: #f0f8fd;
@@ -510,7 +545,7 @@ body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) .numero-step {
     color: white;
 }
 
-/* --- CATEGORIA ROSA (Lievitazione) --- */
+/* Categoria Rosa */
 .nodo-visivo.tipo-lievitazione {
     border-color: #fd79a8;
     background-color: #ffeff5;
@@ -520,7 +555,7 @@ body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) .numero-step {
     color: white;
 }
 
-/* --- CATEGORIA ROSSO (Calore E Cottura) --- */
+/* Categoria Rosso */
 .nodo-visivo.tipo-forno_statico, .nodo-visivo.tipo-forno_vapore, 
 .nodo-visivo.tipo-forno_ventilato, .nodo-visivo.tipo-padella, 
 .nodo-visivo.tipo-pentola_alta, .nodo-visivo.tipo-pentolino {
@@ -534,7 +569,7 @@ body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) .numero-step {
     color: white;
 }
 
-/* --- CATEGORIA GIALLO (Taglio Ed Emulsione) --- */
+/* Categoria Giallo */
 .nodo-visivo.tipo-pimer, .nodo-visivo.tipo-mixer, .nodo-visivo.tipo-tagliare {
     border-color: #f1c40f;
     background-color: #fef9e7;
@@ -542,7 +577,7 @@ body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) .numero-step {
 .nodo-visivo.tipo-pimer.nodo-attivo, .nodo-visivo.tipo-mixer.nodo-attivo, 
 .nodo-visivo.tipo-tagliare.nodo-attivo {
     background-color: #f1c40f;
-    color: #2c3e50; /* Testo scuro per leggibilità sul giallo */
+    color: #2c3e50;
 }
 
 .testo-nodo-alternativo {
@@ -550,23 +585,53 @@ body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) .numero-step {
     font-weight: 600;
     color: #2c3e50;
     padding: 10px 0;
-    text-transform: uppercase; /* Lo rende più simile a un'etichetta tecnica */
+    text-transform: uppercase; 
     letter-spacing: 1px;
 }
 
-/* Badge per la dimensione (spessore, diametro, ecc.) */
-.badge-dim {
-    background-color: #f1f2f6;
-    color: #2f3542;
-    border: 1px solid #ced4da;
+/* --- NUOVO: EFFETTO OSCURAMENTO STEP FATTI --- */
+.nodo-visivo.nodo-completato {
+    opacity: 0.4;
+    background-color: #ecf0f1 !important; /* Forza il grigio archiviazione */
+    border-color: #95a5a6 !important;
+    color: #7f8c8d !important;
+    transition: all 0.3s ease;
+    filter: grayscale(100%); /* Toglie il colore alle icone */
 }
 
-/* Un piccolo accorgimento: se ci sono 3 badge, riduciamo leggermente 
-   il font per farli stare bene su una riga sui telefoni */
-.pannello-parametri {
-    flex-wrap: wrap; /* Permette di andare a capo se lo schermo è minuscolo */
+.nodo-visivo.nodo-completato img {
+    opacity: 0.6; /* Sbiadisce anche il disegno dentro l'icona */
 }
 
-.badge-parametro {
-    white-space: nowrap; /* Evita che il testo del badge vada a capo internamente */
+/* --- EFFETTO COMPLETATO PER IL TESTO A SINISTRA --- */
+.testo-barrato {
+    text-decoration: line-through;
+    color: #95a5a6; /* Grigio chiaro per metterlo in secondo piano */
+    transition: all 0.3s ease;
+}
+
+/* Spegne il blu del cerchio numerico quando lo step è completato */
+.numero-barrato {
+    background-color: #bdc3c7 !important;
+    border-color: #bdc3c7 !important;
+}
+
+/* --- TASTO SCHERMO SEMPRE ON --- */
+#btn-wake-lock {
+    background-color: #7f8c8d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Quando la funzione è attiva, diventa giallo e fa "luce" */
+#btn-wake-lock.attivo {
+    background-color: #f1c40f;
+    color: #2c3e50;
+    box-shadow: 0 0 12px rgba(241, 196, 15, 0.6);
 }

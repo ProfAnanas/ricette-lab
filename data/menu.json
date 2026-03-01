@@ -26,7 +26,7 @@
           "nome_sottocategoria": "Preparazioni base",
           "preparazioni": [
             { "id": "crema_pasticcera", "nome": "Crema pasticcera", "url_dati": "data/pasticceria_base/crema_pasticcera.json" },
-            { "id": "frolla_milano", "nome": "Pasta frolla Milano", "url_dati": "data/pasticceria/ricette_base/frolla_milano.json" }
+            { "id": "frolla_milano", "nome": "Pasta frolla Milano", "url_dati": "data/pasticceria/ricette_base/frolla_milano.json","anno": "1, 2, 3", "tag": "crostata, biscotti, frollini, burro" }
           ]
         }
       ]
