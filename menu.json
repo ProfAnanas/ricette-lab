@@ -1,0 +1,66 @@
+{
+  "catalogo": [
+    {
+      "id_categoria": "tecniche",
+      "nome_categoria": "Tecniche",
+      "sottocategorie": [
+        {
+          "nome_sottocategoria": "Tagli",
+          "preparazioni": [
+            { "id": "taglio_brunoise", "nome": "Taglio a brunoise", "url_dati": "data/tecniche/brunoise.json" }
+          ]
+        },
+        {
+          "nome_sottocategoria": "Brodi e fondi",
+          "preparazioni": [
+            { "id": "fondo_bruno", "nome": "Fondo bruno", "url_dati": "data/cucina_base/fondo_bruno.json" }
+          ]
+        }
+      ]
+    },
+    {
+      "id_categoria": "cucina",
+      "nome_categoria": "Cucina",
+      "sottocategorie": [
+        {
+          "nome_sottocategoria": "Ricette base",
+          "preparazioni": [
+            {
+              "id": "pasta-all-uovo",
+              "nome": "Pasta all'uovo",
+              "url_dati": "data/cucina/ricette_base/pasta_all_uovo.json",
+              "anno": "1, 2, 3",
+              "tag": "uova, ravioli, agnolotti, tagliatelle, pasta fresca"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id_categoria": "pasticceria",
+      "nome_categoria": "Pasticceria e Panificazione",
+      "sottocategorie": [
+        {
+          "nome_sottocategoria": "Preparazioni base",
+          "preparazioni": [
+            { "id": "crema_pasticcera", "nome": "Crema pasticcera", "url_dati": "data/pasticceria_base/crema_pasticcera.json" },
+            { "id": "frolla_milano", "nome": "Pasta frolla Milano", "url_dati": "data/pasticceria/ricette_base/frolla_milano.json","anno": "1, 2, 3", "tag": "crostata, biscotti, frollini, burro" }
+          ]
+        },
+        {
+          "nome_sottocategoria": "Ricette avanzate",
+          "preparazioni": [
+            {
+    "id": "focaccia_ligure",
+    "nome": "Focaccia ligure",
+    "url_dati": "data/pasticceria/ricette_avanzate/focaccia_ligure.json",
+    "anno": "3, 4, 5",
+    "tag": "pizza,focaccia,lievito"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
