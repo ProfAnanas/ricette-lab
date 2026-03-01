@@ -1,27 +1,21 @@
 {
   "catalogo": [
     {
-      "id_categoria": "tecniche",
-      "nome_categoria": "Tecniche",
-      "sottocategorie": [
-        {
-          "nome_sottocategoria": "Tagli",
-          "preparazioni": [
-            { "id": "taglio_brunoise", "nome": "Taglio a brunoise", "url_dati": "data/tecniche/brunoise.json" }
-          ]
-        },
-        {
-          "nome_sottocategoria": "Brodi e fondi",
-          "preparazioni": [
-            { "id": "fondo_bruno", "nome": "Fondo bruno", "url_dati": "data/cucina_base/fondo_bruno.json" }
-          ]
-        }
-      ]
-    },
-    {
       "id_categoria": "cucina",
       "nome_categoria": "Cucina",
       "sottocategorie": [
+        {
+          "nome_sottocategoria": "Tecniche base",
+          "preparazioni": [
+            {
+    "id": "fondo_vegetale",
+    "nome": "Fondo vegetale",
+    "url_dati": "data/cucina/tecniche_base/fondo_vegetale.json",
+    "anno": "1",
+    "tag": "brodo"
+            }
+          ]
+        },
         {
           "nome_sottocategoria": "Ricette base",
           "preparazioni": [
@@ -41,7 +35,7 @@
       "nome_categoria": "Pasticceria e Panificazione",
       "sottocategorie": [
         {
-          "nome_sottocategoria": "Preparazioni base",
+          "nome_sottocategoria": "Ricette base",
           "preparazioni": [
             { "id": "crema_pasticcera", "nome": "Crema pasticcera", "url_dati": "data/pasticceria_base/crema_pasticcera.json" },
             { "id": "frolla_milano", "nome": "Pasta frolla Milano", "url_dati": "data/pasticceria/ricette_base/frolla_milano.json","anno": "1, 2, 3", "tag": "crostata, biscotti, frollini, burro" }
