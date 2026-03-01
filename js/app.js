@@ -290,10 +290,11 @@ function creaNodoDestra(dati) {
 }
 
 function attivaSincronia(testo, nodo) {
-    // Eventi del mouse per l'evidenziazione temporanea
-    testo.addEventListener('mouseenter', () => {
-        testo.classList.add('evidenziato');
+    nodo.addEventListener('mouseenter', () => {
         nodo.classList.add('nodo-attivo');
+        testo.classList.add('evidenziato');
+        // Questo comando ora diventa fondamentale: tiene il numero allineato all'occhio
+        testo.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
     });
     
     testo.addEventListener('mouseleave', () => {

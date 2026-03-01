@@ -19,8 +19,8 @@
       ]
     },
     {
-      "id_categoria": "cucina_base",
-      "nome_categoria": "Cucina di base",
+      "id_categoria": "cucina",
+      "nome_categoria": "Cucina",
       "sottocategorie": [
         {
           "nome_sottocategoria": "Ricette base",
@@ -37,8 +37,8 @@
       ]
     },
     {
-      "id_categoria": "pasticceria_base",
-      "nome_categoria": "Pasticceria di base",
+      "id_categoria": "pasticceria",
+      "nome_categoria": "Pasticceria e Panificazione",
       "sottocategorie": [
         {
           "nome_sottocategoria": "Preparazioni base",

@@ -435,9 +435,14 @@ body.modalita-algoritmo #pannello-algoritmo {
     grid-template-columns: 1fr; 
 }
 
+/* --- MODALITÀ ALGORITMO: FIX POPUP E STICKY --- */
+
 body.modalita-algoritmo #plancia-doppia {
-    grid-template-columns: 95px 1fr; /* Allargato da 60px a 95px per farci stare spunta e numero */
+    grid-template-columns: 95px 1fr; 
     gap: 15px;
+    align-items: flex-start; 
+    /* Fondamentale per non tagliare i popup che escono lateralmente */
+    overflow: visible; 
 }
 
 body.modalita-algoritmo #lista-ingredienti,
@@ -449,7 +454,9 @@ body.modalita-algoritmo .step-ricetta {
     border-left: none;
     background-color: transparent;
     padding: 5px 0;
-    transform: none; /* Annulla l'effetto spostamento in questa modalità */
+    transform: none; 
+    /* Permette al popup figlio di uscire dai bordi */
+    overflow: visible; 
 }
 
 body.modalita-algoritmo .testo-step {
@@ -457,15 +464,25 @@ body.modalita-algoritmo .testo-step {
 }
 
 body.modalita-algoritmo #pannello-testo {
-    padding: 20px 10px; /* Riduciamo l'imbottitura orizzontale a 10px per recuperare spazio prezioso */
-    overflow: visible;
-    position: relative;
-    z-index: 100;
+    padding: 20px 10px;
+    background-color: transparent; /* Lo rendiamo trasparente per non coprire l'algoritmo */
+    box-shadow: none; /* Togliamo l'ombra che ora disturberebbe */
+    
+    position: sticky;
+    top: 20px;       
+    z-index: 9999; /* Lo portiamo davanti a tutto per far vedere i popup */
+    overflow: visible; /* IMPORTANTE: se è 'auto' o 'hidden' il popup sparisce */
+}
+
+/* Assicuriamoci che il popup sia davvero sopra a ogni cosa */
+body.modalita-algoritmo .testo-step.mostra-testo-popup {
+    display: block;
+    z-index: 10000; 
 }
 
 body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) {
     position: relative;
-    z-index: 1000;
+    z-index: 10000;
 }
 
 /* IL POPUP MODIFICATO (Anti-Sbordamento e Riposizionato) */
@@ -525,7 +542,7 @@ body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) .numero-step {
 
 .nodo-visivo.nodo-attivo, .nodo-visivo.tipo-normale.nodo-attivo {
     background-color: #f2f2f2; 
-    border-color: #95a5a6; 
+    border-color: #929999; 
     color: #2c3e50; 
 }
 
@@ -553,12 +570,12 @@ body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) .numero-step {
 }
 
 /* Categoria Rosa */
-.nodo-visivo.tipo-lievitazione {
+.nodo-visivo.tipo-lievitazione, .nodo-visivo.tipo-riposo {
     border-color: #fd79a8;
     background-color: #ffeff5;
 }
-.nodo-visivo.tipo-lievitazione.nodo-attivo {
-    background-color: #fd79a8;
+.nodo-visivo.tipo-lievitazione.nodo-attivo,.nodo-visivo.tipo-riposo.nodo-attivo {
+    background-color: #eb4881;
     color: white;
 }
 
@@ -577,12 +594,12 @@ body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) .numero-step {
 }
 
 /* Categoria Giallo */
-.nodo-visivo.tipo-pimer, .nodo-visivo.tipo-mixer, .nodo-visivo.tipo-tagliare {
+.nodo-visivo.tipo-pimer, .nodo-visivo.tipo-mixer, .nodo-visivo.tipo-tagliare, .nodo-visivo.tipo-impastare_mano {
     border-color: #f1c40f;
     background-color: #fef9e7;
 }
 .nodo-visivo.tipo-pimer.nodo-attivo, .nodo-visivo.tipo-mixer.nodo-attivo, 
-.nodo-visivo.tipo-tagliare.nodo-attivo {
+.nodo-visivo.tipo-tagliare.nodo-attivo, .nodo-visivo.tipo-impastare_mano.nodo-attivo {
     background-color: #f1c40f;
     color: #2c3e50;
 }
