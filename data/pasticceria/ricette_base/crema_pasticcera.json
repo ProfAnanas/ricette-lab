@@ -1,0 +1,48 @@
+{
+    "id": "crema-pasticcera",
+    "titolo": "Crema pasticcera",
+    "ingredienti": [
+        "500 g Latte intero fresco",
+        "200 g Tuorli",
+        "150 g Zucchero",
+        "25 g Amido di riso",
+        "25 g Amido di mais",
+        "Aromi a piacere (vaniglia, limone, ecc.)",
+        "Variante cioccolato fondente:",
+        "180 g cioccolato fondente 55% fuso caldo"
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Portare a bollore il latte",
+            "icona": "pentolino",
+            "temperatura": "100°C"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "In una ciotola mescolare tuorli, zucchero, amidi e aromi.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Stemperare un po' di latte nel composto di uova in modo che la consistenza sia più vicina possibile al latte.\nQuindi aggiungere il composto ammorbidito nel latte.",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Cuocere a fiamma bassa mescolando continuamente fino a che la crema non raggiunge gli 84°C.",
+            "icona": "pentolino",
+            "temperatura": "84°C "
+        },
+        { "tipo": "bivio", "rami": [
+        { "step_id": "step-5a", "testo": "Emulsionare con un frullatore ad immersione", "icona": "pimer"},
+        { "step_id": "step-5b", "testo": "Variante al cioccolato: Emulsionare aggiungendo il cioccolato caldo fuso", "icona": "pimer"}
+      ]},
+      {
+            "step_id": "step-7",
+            "testo": "Trasferire in un contenitore largo, pellicola a contatto. Abbattere in positivo",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        }
+    ]
+    }

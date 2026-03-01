@@ -37,7 +37,13 @@
         {
           "nome_sottocategoria": "Ricette base",
           "preparazioni": [
-            { "id": "crema_pasticcera", "nome": "Crema pasticcera", "url_dati": "data/pasticceria_base/crema_pasticcera.json" },
+            {
+    "id": "crema_pasticcera",
+    "nome": "Crema pasticcera",
+    "url_dati": "data/pasticceria/ricette_base/crema_pasticcera.json",
+    "anno": "1, 2, 3",
+    "tag": "diplomatica,chantilly,uovo,uova,latte,panna,cioccolato"
+},
             { "id": "frolla_milano", "nome": "Pasta frolla Milano", "url_dati": "data/pasticceria/ricette_base/frolla_milano.json","anno": "1, 2, 3", "tag": "crostata, biscotti, frollini, burro" }
           ]
         },

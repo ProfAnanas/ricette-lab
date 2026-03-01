@@ -197,25 +197,7 @@ function creaTestoSinistra(dati) {
     stepContainer.appendChild(numeroStep);
     stepContainer.appendChild(testoStep);
 
-    // 5. Gestione dei popup quando si clicca sul numero o sul testo
-    numeroStep.addEventListener('click', (evento) => {
-        if (document.body.classList.contains('modalita-algoritmo')) {
-            evento.stopPropagation(); 
-            
-            document.querySelectorAll('.mostra-testo-popup').forEach(el => {
-                if(el !== testoStep) el.classList.remove('mostra-testo-popup');
-            });
-            
-            testoStep.classList.toggle('mostra-testo-popup');
-        }
-    });
-
-    testoStep.addEventListener('click', (evento) => {
-        if (document.body.classList.contains('modalita-algoritmo')) {
-            evento.stopPropagation();
-            testoStep.classList.remove('mostra-testo-popup');
-        }
-    });
+    // (I clic per i popup sono stati spostati in "attivaSincronia" per farli dialogare coi nodi)
 
     return stepContainer;
 }
@@ -290,45 +272,77 @@ function creaNodoDestra(dati) {
 }
 
 function attivaSincronia(testo, nodo) {
-    nodo.addEventListener('mouseenter', () => {
-        nodo.classList.add('nodo-attivo');
+    const numeroStep = testo.querySelector('.numero-step');
+    const testoStep = testo.querySelector('.testo-step');
+
+    // 1. Hover: Evidenzia al passaggio del mouse
+    testo.addEventListener('mouseenter', () => {
         testo.classList.add('evidenziato');
-        // Questo comando ora diventa fondamentale: tiene il numero allineato all'occhio
-        testo.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
+        nodo.classList.add('nodo-attivo');
     });
     
     testo.addEventListener('mouseleave', () => {
-        testo.classList.remove('evidenziato');
-        nodo.classList.remove('nodo-attivo');
+        if (!testoStep.classList.contains('mostra-testo-popup')) {
+            testo.classList.remove('evidenziato');
+            nodo.classList.remove('nodo-attivo');
+        }
     });
     
     nodo.addEventListener('mouseenter', () => {
         nodo.classList.add('nodo-attivo');
         testo.classList.add('evidenziato');
-        testo.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        testo.scrollIntoView({ behavior: 'smooth', block: 'center' }); 
     });
     
     nodo.addEventListener('mouseleave', () => {
-        nodo.classList.remove('nodo-attivo');
-        testo.classList.remove('evidenziato');
+        if (!testoStep.classList.contains('mostra-testo-popup')) {
+            nodo.classList.remove('nodo-attivo');
+            testo.classList.remove('evidenziato');
+        }
     });
 
-    // IL NUOVO EVENTO: Clic sul nodo visivo
-    nodo.addEventListener('click', (evento) => {
+    // 2. Click: Logica Bidirezionale
+    function toggleSincronizzato(evento) {
         if (document.body.classList.contains('modalita-algoritmo')) {
             evento.stopPropagation();
             
-            const testoStep = testo.querySelector('.testo-step');
+            const eraAperto = testoStep.classList.contains('mostra-testo-popup');
             
-            if (testoStep) {
-                document.querySelectorAll('.mostra-testo-popup').forEach(el => {
-                    if (el !== testoStep) el.classList.remove('mostra-testo-popup');
-                });
+            // Spegne gli altri popup e nodi attivi
+            document.querySelectorAll('.mostra-testo-popup').forEach(el => el.classList.remove('mostra-testo-popup'));
+            document.querySelectorAll('.step-ricetta.evidenziato').forEach(el => el.classList.remove('evidenziato'));
+            document.querySelectorAll('.nodo-visivo.nodo-attivo').forEach(el => el.classList.remove('nodo-attivo'));
+            
+            // Accende la coppia corrente
+            if (!eraAperto) {
+                testoStep.classList.add('mostra-testo-popup');
+                testo.classList.add('evidenziato');
+                nodo.classList.add('nodo-attivo');
                 
-                testoStep.classList.toggle('mostra-testo-popup');
+                // Centra l'elemento opposto
+                if (evento.currentTarget === numeroStep) {
+                    nodo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    testo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
             }
         }
-    });
+    }
+
+    if (numeroStep) numeroStep.addEventListener('click', toggleSincronizzato);
+    nodo.addEventListener('click', toggleSincronizzato);
+
+    // Chiusura automatica cliccando sul testo del popup stesso
+    if (testoStep) {
+        testoStep.addEventListener('click', (evento) => {
+            if (document.body.classList.contains('modalita-algoritmo')) {
+                evento.stopPropagation();
+                testoStep.classList.remove('mostra-testo-popup');
+                testo.classList.remove('evidenziato');
+                nodo.classList.remove('nodo-attivo');
+            }
+        });
+    }
 }
 
 // Funzione per passare dal testo all'algoritmo
