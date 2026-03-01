@@ -46,8 +46,21 @@
             { "id": "crema_pasticcera", "nome": "Crema pasticcera", "url_dati": "data/pasticceria_base/crema_pasticcera.json" },
             { "id": "frolla_milano", "nome": "Pasta frolla Milano", "url_dati": "data/pasticceria/ricette_base/frolla_milano.json","anno": "1, 2, 3", "tag": "crostata, biscotti, frollini, burro" }
           ]
+        },
+        {
+          "nome_sottocategoria": "Ricette avanzate",
+          "preparazioni": [
+            {
+    "id": "focaccia_ligure",
+    "nome": "Focaccia ligure",
+    "url_dati": "data/pasticceria/ricette_avanzate/focaccia_ligure.json",
+    "anno": "3, 4, 5",
+    "tag": "pizza,focaccia,lievito"
+            }
+          ]
         }
       ]
     }
   ]
 }
+

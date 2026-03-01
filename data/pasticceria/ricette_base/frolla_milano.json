@@ -9,7 +9,7 @@
     "Aromi a piacere: vaniglia, scorza di agrumi"
   ],
   "procedimento": [
-    { "step_id": "step-1", "testo": "Impastare il burro a pomata con lo zucchero", "icona": "foglia" },
+    { "step_id": "step-1", "testo": "Nella planetaria munita di foglia (o a mano): impastare il burro a pomata con lo zucchero", "icona": "foglia", "velocita": "media"},
     { "step_id": "step-2", "testo": "Unire le uova poco per volta", "icona": "aggiungere" },
     { "step_id": "step-3", "testo": "Aggiungere la farina in due volte.", "icona": "aggiungere" },
     { "step_id": "step-4", "testo": "Stendere a uno spessore di 5mm tra due fogli di carta da forno", "icona": "mattarello", "dimensione": "5 mm"},

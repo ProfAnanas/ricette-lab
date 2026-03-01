@@ -250,8 +250,8 @@ function creaNodoDestra(dati) {
         divNodo.appendChild(testoPlaceholder);
     }
 
-    // Gestione dei parametri (Temperatura, Tempo, Dimensione)
-    if (dati.temperatura || dati.tempo || dati.dimensione) {
+    // Gestione dei parametri (Temperatura, Tempo, Dimensione, Velocità)
+    if (dati.temperatura || dati.tempo || dati.dimensione || dati.velocita) {
         const divParametri = document.createElement('div');
         divParametri.classList.add('pannello-parametri');
         
@@ -274,6 +274,13 @@ function creaNodoDestra(dati) {
             badgeDim.classList.add('badge-parametro', 'badge-dim');
             badgeDim.textContent = `📏 ${dati.dimensione}`;
             divParametri.appendChild(badgeDim);
+        }
+
+        if (dati.velocita) {
+            const badgeVel = document.createElement('span');
+            badgeVel.classList.add('badge-parametro', 'badge-vel');
+            badgeVel.textContent = `⚙️ ${dati.velocita}`;
+            divParametri.appendChild(badgeVel);
         }
         
         divNodo.appendChild(divParametri);

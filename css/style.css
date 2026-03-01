@@ -350,6 +350,13 @@ summary:hover {
     border: 1px solid #ced4da;
 }
 
+/* Badge per la velocità di impastamento */
+.badge-vel {
+    background-color: #e8daef;
+    color: #8e44ad;
+    border: 1px solid #d2b4de;
+}
+
 /* --- BIVI E RAMIFICAZIONI --- */
 
 /* Contenitore per i bivi affiancati a destra */

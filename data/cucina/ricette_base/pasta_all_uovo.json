@@ -28,7 +28,7 @@
         {
             "step_id": "step-4",
             "testo": " Impastare a mano fino a ottenere un impasto omogeneo",
-            "icona": "foglia"
+            "icona": "impastare_mano"
         },
         {
             "step_id": "step-5",

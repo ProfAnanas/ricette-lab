@@ -1,0 +1,115 @@
+{
+    "id": "focaccia_ligure",
+    "titolo": "Focaccia ligure",
+    "ingredienti": [
+        "Per una teglia 40x30",
+        "500 g farina 00 media (200-250W)",
+        "300 g acqua",
+        "10 g lievito",
+        "12 g sale + 10 g circa acqua",
+        "40 g olio (o 20 olio e 20 strutto)",
+        "5 g Malto diastasico (o 5 g di miele)",
+        "Per la salamoia:",
+        "160 g Acqua",
+        "80 g Olio EVO",
+        "10 g Sale"
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Nella ciotola della planetaria munita di foglia, inserire: farina, malto, lievito sbriciolato e il 90% dell'acqua. Velocità MINIMA",
+            "icona": "foglia",
+            "tempo": "1-2 min",
+            "velocita": "minima"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Aggiungere il sale e la restante acqua.",
+            "icona": "foglia",
+            "tempo": "30 sec.",
+            "velocita": "minima"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Sostituire la foglia con il gancio e impastare a velocità MEDIA finché l'impasto non inizia ad essere liscio.",
+            "icona": "gancio",
+            "tempo": "10 min. circa",
+            "velocita": "media-alta"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Aggiungere l'olio a filo",
+            "icona": "gancio",
+            "velocita": "media-alta"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Rovesciare l'impasto sul piano di lavoro, dare una forma a palla (senza stringere troppo).\nCoprire a campana (con una ciotola rovesciata) e lasciare riposare 30 minuti.",
+            "icona": "riposo",
+            "tempo": "30 min."
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Ungere generosamente la teglia con olio EVO.\nPosizionare l'impasto al centro.",
+            "icona": "forma"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Schiacciare con i polpastrelli cercando di allargarlo e arrivando a coprire circa l'80% della teglia. ",
+            "icona": "forma"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Spennellare la superficie con un velo d'olio (per non far fare la \"pelle\") e lasciare riposare scoperto dentro il forno per 30 minuti.",
+            "icona": "riposo",
+            "tempo": "30 min"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Allargare delicatamente l'impasto fino a coprire tutti gli angoli.",
+            "icona": "forma"
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Preparare la salamoia: in una bottiglietta o contenitore ermetico mettere l'acqua, l'olio e il sale quindi agitare violentemente finché diventa una crema biancastra.",
+            "icona": "montare"
+        },
+        {
+            "step_id": "step-11",
+            "testo": "Versare metà della salamoia sulla focaccia.\nAffonda energicamente le dita per creare i buchi caratteristici, senza bucare l'impasto.\nVersare la restante salamoia riempiendo bene i buchi.",
+            "testo_nodo": "NON BUCARE L'IMPASTO"
+        },
+        {
+            "step_id": "step-12",
+            "testo": "Far lievitare la focaccia per circa 60 minuti a una temperatura di 24-26°C",
+            "icona": "lievitazione",
+            "temperatura": "24-26°C",
+            "tempo": "60 min."
+        },
+        {
+            "step_id": "step-13",
+            "testo": "Preriscaldare il forno statico a 300°C",
+            "icona": "forno_statico",
+            "temperatura": "300°C"
+        },
+        {
+            "step_id": "step-14",
+            "testo": "Infornare la teglia poggiandola direttamente sul fondo del forno (o sulla griglia più bassa possibile) per 9 minuti.",
+            "icona": "forno_statico",
+            "temperatura": "300°C",
+            "tempo": "9 min."
+        },
+        {
+            "step_id": "step-15",
+            "testo": "Spostare la teglia a metà altezza e cuocere per altri 4-6 minuti (o finché è dorata a piacere).",
+            "icona": "forno_statico",
+            "temperatura": "300°C",
+            "tempo": "4-6 min."
+        },
+        {
+            "step_id": "step-16",
+            "testo": "Sforna e metti subito la focaccia su una gratella per far uscire l'umidità residua (evita che diventi molle sotto).",
+            "testo_nodo": "SFORNA SU GRIGLIA"
+        }
+    ]
+}
