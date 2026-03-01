@@ -1,0 +1,644 @@
+/* Stili di base e reset con font accessibile */
+* {
+    box-sizing: border-box; /* Regola d'oro: impedisce agli elementi di sbordare */
+}
+
+body {
+    font-family: 'Lexend', Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #2c3e50;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    letter-spacing: 0.3px; 
+}
+
+header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Pannello di ricerca e filtri */
+#pannello-controllo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permette agli elementi di andare a capo se non c'è spazio */
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 15px; /* Evita che la barra di ricerca tocchi i bordi del display */
+}
+
+#campo-ricerca, #filtro-anno {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+#campo-ricerca {
+    flex-grow: 1;
+}
+
+/* Regola per gli schermi degli smartphone (Sotto I 600px) */
+@media (max-width: 600px) {
+    #pannello-controllo {
+        flex-direction: column; /* Impila ricerca, menu e bottone in verticale */
+        align-items: stretch;
+    }
+
+    #campo-ricerca, #filtro-anno, #btn-wake-lock {
+        width: 100%; /* Ogni elemento prende tutta la riga a disposizione */
+        margin: 0;
+    }
+}
+
+/* Stile per i menu a tendina delle categorie */
+.blocco-categoria {
+    background: white;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+summary {
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #ffffff;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+    list-style-position: inside;
+}
+
+summary:hover {
+    background-color: #f9fafc;
+}
+
+/* Griglia dei pulsanti delle ricette */
+.lista-ricette {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    background-color: #fafbfc;
+}
+
+.btn-ricetta {
+    background-color: #ffffff;
+    border: 1px solid #dcdde1;
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: all 0.2s ease;
+    color: #2f3640;
+}
+
+.btn-ricetta:hover {
+    background-color: #3498db;
+    color: white;
+    border-color: #3498db;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
+}
+
+/* Sottocategorie Annidate */
+.blocco-sottocategoria {
+    margin: 10px 20px;
+    border-left: 3px solid #3498db;
+    background-color: #fdfdfd;
+    border-radius: 4px;
+}
+
+.blocco-sottocategoria summary {
+    font-size: 16px;
+    color: #555;
+    background-color: transparent;
+    border-bottom: none;
+    padding: 10px 15px;
+}
+
+.blocco-sottocategoria summary:hover {
+    color: #3498db;
+}
+
+/* Struttura della testata della ricetta (MODIFICATA: Titolo in alto, tasti sotto) */
+#testata-ricetta {
+    display: flex;
+    flex-direction: column; /* Impila gli elementi in verticale */
+    align-items: center;    /* Centra tutto */
+    text-align: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e1e8ed;
+    width: 100%;
+}
+
+#pulsante-indietro {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+#pulsante-indietro:hover {
+    background-color: #c0392b;
+}
+
+/* La plancia divisa a metà */
+#plancia-doppia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* Stile dei due pannelli */
+#pannello-testo, #pannello-algoritmo {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    max-height: 75vh; 
+    overflow-y: auto;
+}
+
+/* Stile per la lista degli ingredienti */
+#lista-ingredienti {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+#lista-ingredienti li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+/* Rimodelliamo la riga del procedimento in modalità normale (MODIFICATA PER CHECKBOX) */
+.step-ricetta {
+    display: flex; 
+    align-items: center; /* Allinea perfettamente al centro numero, checkbox e testo */
+    gap: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-left: 4px solid #bdc3c7;
+    background-color: #f9fbfc;
+    border-radius: 0 6px 6px 0;
+    position: relative;
+    width: 100%;
+}
+
+/* --- NUOVE CLASSI PER IL CHECKBOX --- */
+.contenitore-check {
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.checkbox-stato-step {
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Il badge circolare del numero */
+.numero-step {
+    background-color: #2c3e50;
+    color: white;
+    min-width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.testo-step {
+    padding-top: 0; /* Rimossa spaziatura extra, ora è allineato al centro dal flexbox */
+}
+
+/* Hover base su riga normale */
+.step-ricetta.evidenziato, .step-ricetta:hover {
+    border-left-color: #f39c12;
+    background-color: #fff8e1;
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
+
+/* Regola per gli schermi piccoli (smartphone degli alunni a casa) */
+@media (max-width: 900px) {
+    #plancia-doppia {
+        grid-template-columns: 1fr; 
+    }
+    #pannello-testo, #pannello-algoritmo {
+        max-height: none; 
+    }
+}
+
+/* Nodi visivi più morbidi e moderni */
+.nodo-visivo {
+    background-color: #ffffff;
+    border: 2px solid #e1e8ed;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: #34495e;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    position: relative;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.03);
+}
+
+/* La linea che collega un nodo all'altro (tranne l'ultimo) */
+.nodo-visivo:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background-color: #bdc3c7;
+}
+
+/* L'effetto quando il nodo si accende */
+.nodo-attivo {
+    background-color: #3498db;
+    border-color: #2980b9;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+}
+
+/* Contenitore dell'icona per centrarla perfettamente */
+.icona-principale {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.icona-principale img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+/* Badge dei parametri */
+.pannello-parametri {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 12px;
+    flex-wrap: wrap; /* Manda a capo se stretto */
+}
+
+.badge-parametro {
+    font-size: 13px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    white-space: nowrap;
+}
+
+.badge-temp {
+    background-color: #ffeaa7;
+    color: #d35400;
+    border: 1px solid #fdcb6e;
+}
+
+.badge-tempo {
+    background-color: #81ecec;
+    color: #00b894;
+    border: 1px solid #00cec9;
+}
+
+.badge-dim {
+    background-color: #f1f2f6;
+    color: #2f3542;
+    border: 1px solid #ced4da;
+}
+
+/* Badge per la velocità di impastamento */
+.badge-vel {
+    background-color: #e8daef;
+    color: #8e44ad;
+    border: 1px solid #d2b4de;
+}
+
+/* --- BIVI E RAMIFICAZIONI --- */
+
+/* Contenitore per i bivi affiancati a destra */
+.contenitore-bivio-visivo {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Ridotto leggermente per recuperare spazio prezioso */
+    margin-bottom: 20px;
+    width: 100%; /* Sfruttiamo tutta la larghezza della colonna */
+}
+
+/* Restringe i nodi del ramo per farli stare sulla stessa riga */
+.nodo-ramo {
+    flex: 1; /* Forza i rami a dividersi lo spazio esattamente a metà */
+    min-width: 0; /* TRUCCO FONDAMENTALE: Impedisce al nodo di allargarsi oltre il genitore, forzando il testo a capo */
+    margin-bottom: 0;
+    border-style: dashed;
+    padding: 10px 5px; /* Imbottitura più snella */
+    font-size: 14px; /* Riduciamo leggermente il font per i bivi */
+}
+
+/* Salvagente per gli schermi degli smartphone (sotto i 450px) */
+@media (max-width: 450px) {
+    .contenitore-bivio-visivo {
+        flex-direction: column; /* Quando non c'è più spazio, li impila in verticale */
+        align-items: center;
+    }
+    
+    .nodo-ramo {
+        width: 90%; /* Occupa quasi tutta la larghezza da impilato */
+        margin-bottom: 15px; /* Crea spazio tra un bivio e l'altro */
+    }
+    
+    .nodo-ramo:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.nodo-ramo {
+    width: 100%;
+    margin-bottom: 0;
+    border-style: dashed;
+}
+
+/* Stile per il testo del bivio a sinistra */
+.blocco-bivio-testo {
+    margin-left: 6px; /* <-- PRIMA ERA 15px. Abbassando questo, la linea va a sinistra */
+    border-left: 2px dashed #bdc3c7;
+    padding-left: 12px; /* Spazio interno tra la linea tratteggiata e la casella di spunta */
+}
+
+#pulsante-toggle-vista {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: auto; /* PRIMA ERA margin-left: auto. Così lo spinge tutto a sinistra! */
+}
+
+
+/* --- REGOLE PER LA MODALITÀ ALGORITMO --- */
+
+#pannello-algoritmo {
+    display: none;
+}
+
+body.modalita-algoritmo #pannello-algoritmo {
+    display: block;
+}
+
+#plancia-doppia {
+    grid-template-columns: 1fr; 
+}
+
+body.modalita-algoritmo #plancia-doppia {
+    grid-template-columns: 95px 1fr; /* Allargato da 60px a 95px per farci stare spunta e numero */
+    gap: 15px;
+}
+
+body.modalita-algoritmo #lista-ingredienti,
+body.modalita-algoritmo h3 {
+    display: none;
+}
+
+body.modalita-algoritmo .step-ricetta {
+    border-left: none;
+    background-color: transparent;
+    padding: 5px 0;
+    transform: none; /* Annulla l'effetto spostamento in questa modalità */
+}
+
+body.modalita-algoritmo .testo-step {
+    display: none; 
+}
+
+body.modalita-algoritmo #pannello-testo {
+    padding: 20px 10px; /* Riduciamo l'imbottitura orizzontale a 10px per recuperare spazio prezioso */
+    overflow: visible;
+    position: relative;
+    z-index: 100;
+}
+
+body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) {
+    position: relative;
+    z-index: 1000;
+}
+
+/* IL POPUP MODIFICATO (Anti-Sbordamento e Riposizionato) */
+body.modalita-algoritmo .testo-step.mostra-testo-popup {
+    display: block;
+    position: absolute;
+    left: 80px; /* Spostato più a destra rispetto a prima (era 55px) */
+    top: 50%;
+    transform: translateY(-50%);
+    
+    /* Regole salva-schermo per cellulari aggiornate al nuovo spazio */
+    max-width: calc(100vw - 110px);
+    width: max-content;
+    
+    /* ... il resto rimane uguale ... */
+    background-color: #ffffff;
+    border-left: 5px solid #f39c12;
+    padding: 12px 15px;
+    border-radius: 6px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    z-index: 9999; 
+    cursor: pointer; 
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    animation: comparsaFluida 0.25s ease-out forwards;
+}
+
+/* Animazione aggiornata */
+@keyframes comparsaFluida {
+    from { opacity: 0; transform: translate(-15px, -50%); }
+    to { opacity: 1; transform: translate(0, -50%); }
+}
+
+body.modalita-algoritmo .numero-step {
+    background-color: #2c3e50; 
+    color: white;
+    border: 2px solid white;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+body.modalita-algoritmo .numero-step:hover,
+body.modalita-algoritmo .step-ricetta.evidenziato .numero-step,
+body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) .numero-step {
+    background-color: #f39c12;
+    border-color: #f39c12;
+}
+
+/* --- COLORI DINAMICI DEI NODI --- */
+
+.nodo-visivo, .nodo-visivo.tipo-normale {
+    border-color: #bdc3c7;
+    background-color: #ffffff; 
+    color: #2c3e50;
+}
+
+.nodo-visivo.nodo-attivo, .nodo-visivo.tipo-normale.nodo-attivo {
+    background-color: #f2f2f2; 
+    border-color: #95a5a6; 
+    color: #2c3e50; 
+}
+
+/* Categoria Verde */
+.nodo-visivo.tipo-foglia, .nodo-visivo.tipo-frusta, .nodo-visivo.tipo-gancio, 
+.nodo-visivo.tipo-mescolare, .nodo-visivo.tipo-montare {
+    border-color: #2ecc71;
+    background-color: #f0fbf4;
+}
+.nodo-visivo.tipo-foglia.nodo-attivo, .nodo-visivo.tipo-frusta.nodo-attivo, 
+.nodo-visivo.tipo-gancio.nodo-attivo, .nodo-visivo.tipo-mescolare.nodo-attivo, 
+.nodo-visivo.tipo-montare.nodo-attivo {
+    background-color: #2ecc71;
+    color: white;
+}
+
+/* Categoria Azzurro */
+.nodo-visivo.tipo-abbattitore, .nodo-visivo.tipo-frigorifero {
+    border-color: #3498db;
+    background-color: #f0f8fd;
+}
+.nodo-visivo.tipo-abbattitore.nodo-attivo, .nodo-visivo.tipo-frigorifero.nodo-attivo {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Categoria Rosa */
+.nodo-visivo.tipo-lievitazione, .nodo-visivo.tipo-riposo {
+    border-color: #fd79a8;
+    background-color: #ffeff5;
+}
+.nodo-visivo.tipo-lievitazione.nodo-attivo, .nodo-visivo.tipo-riposo.nodo.attivo {
+    background-color: #fd79a8;
+    color: white;
+}
+
+/* Categoria Rosso */
+.nodo-visivo.tipo-forno_statico, .nodo-visivo.tipo-forno_vapore, 
+.nodo-visivo.tipo-forno_ventilato, .nodo-visivo.tipo-padella, 
+.nodo-visivo.tipo-pentola_alta, .nodo-visivo.tipo-pentolino {
+    border-color: #e74c3c;
+    background-color: #fdf2f0;
+}
+.nodo-visivo.tipo-forno_statico.nodo-attivo, .nodo-visivo.tipo-forno_vapore.nodo-attivo, 
+.nodo-visivo.tipo-forno_ventilato.nodo-attivo, .nodo-visivo.tipo-padella.nodo-attivo, 
+.nodo-visivo.tipo-pentola_alta.nodo-attivo, .nodo-visivo.tipo-pentolino.nodo-attivo {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Categoria Giallo */
+.nodo-visivo.tipo-pimer, .nodo-visivo.tipo-mixer, .nodo-visivo.tipo-tagliare, .nodo-visivo.tipo-impastare_mano {
+    border-color: #f1c40f;
+    background-color: #fef9e7;
+}
+.nodo-visivo.tipo-pimer.nodo-attivo, .nodo-visivo.tipo-mixer.nodo-attivo, 
+.nodo-visivo.tipo-tagliare.nodo-attivo, .nodo-visivo.tipo-impastare_mano.nodo-attivo {
+    background-color: #f1c40f;
+    color: #2c3e50;
+}
+
+.testo-nodo-alternativo {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    padding: 10px 0;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+}
+
+/* --- NUOVO: EFFETTO OSCURAMENTO STEP FATTI --- */
+.nodo-visivo.nodo-completato {
+    opacity: 0.4;
+    background-color: #ecf0f1 !important; /* Forza il grigio archiviazione */
+    border-color: #95a5a6 !important;
+    color: #7f8c8d !important;
+    transition: all 0.3s ease;
+    filter: grayscale(100%); /* Toglie il colore alle icone */
+}
+
+.nodo-visivo.nodo-completato img {
+    opacity: 0.6; /* Sbiadisce anche il disegno dentro l'icona */
+}
+
+/* --- EFFETTO COMPLETATO PER IL TESTO A SINISTRA --- */
+.testo-barrato {
+    text-decoration: line-through;
+    color: #95a5a6; /* Grigio chiaro per metterlo in secondo piano */
+    transition: all 0.3s ease;
+}
+
+/* Spegne il blu del cerchio numerico quando lo step è completato */
+.numero-barrato {
+    background-color: #bdc3c7 !important;
+    border-color: #bdc3c7 !important;
+}
+
+/* --- TASTO SCHERMO SEMPRE ON --- */
+#btn-wake-lock {
+    background-color: #7f8c8d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Quando la funzione è attiva, diventa giallo e fa "luce" */
+#btn-wake-lock.attivo {
+    background-color: #f1c40f;
+    color: #2c3e50;
+    box-shadow: 0 0 12px rgba(241, 196, 15, 0.6);
+}
