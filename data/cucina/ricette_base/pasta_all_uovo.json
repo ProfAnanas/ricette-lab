@@ -1,0 +1,40 @@
+{
+    "id": "pasta_all_uovo",
+    "titolo": "Pasta all'uovo",
+    "ingredienti": [
+        "Per 10 persone",
+        "1000 g Farina 0",
+        "300 g Uova intere",
+        "50 g Acqua",
+        "30 g Olio EVO",
+        "20 g Sale fino"
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Disporre la farina a fontana",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Versare al centro della fontana le uova, l'acqua, l'olio e il sale.",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Mescolare i liquidi al centro della fontana e pian piano incorporare la farina.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": " Impastare a mano fino a ottenere un impasto omogeneo",
+            "icona": "foglia"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Avvolgere l’impasto con carta pellicola e stabilizzare a +3 °C per 1 ora",
+            "icona": "frigorifero",
+            "tempo": "1 ora"
+        }
+    ]
+}

@@ -19,6 +19,24 @@
       ]
     },
     {
+      "id_categoria": "cucina_base",
+      "nome_categoria": "Cucina di base",
+      "sottocategorie": [
+        {
+          "nome_sottocategoria": "Ricette base",
+          "preparazioni": [
+            {
+              "id": "pasta-all-uovo",
+              "nome": "Pasta all'uovo",
+              "url_dati": "data/cucina/ricette_base/pasta_all_uovo.json",
+              "anno": "1, 2, 3",
+              "tag": "uova, ravioli, agnolotti, tagliatelle, pasta fresca"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id_categoria": "pasticceria_base",
       "nome_categoria": "Pasticceria di base",
       "sottocategorie": [
