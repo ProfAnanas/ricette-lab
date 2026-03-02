@@ -800,3 +800,31 @@ body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) .numero-step {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+/* Nasconde il badge della teglia/dosi nella vista algoritmo */
+body.modalita-algoritmo .badge-nota-dosi {
+    display: none !important;
+}
+
+/* Regole attive solo durante la stampa (o salvataggio in PDF) */
+@media print {
+    /* Nasconde tutto ciò che non è la ricetta testuale */
+    #griglia-menu, #pannello-controllo, #pulsanti-esportazione, #pulsante-toggle-vista {
+        display: none !important;
+    }
+    
+    body {
+        background-color: white;
+        color: black;
+    }
+    
+    /* Rimuove i bordi azzurri dai box dei numeri per renderli puro testo */
+    .input-quantita {
+        border: none;
+        background: transparent;
+        padding: 0;
+        width: auto;
+        text-align: right;
+        box-shadow: none;
+    }
+}

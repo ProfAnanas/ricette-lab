@@ -1,0 +1,120 @@
+{
+    "id": "pan_bauletto",
+    "titolo": "Pan Bauletto",
+    "nota_dosi": "per uno stampo rettangolare lungo 25-28cm e largo 9-11cm",
+    "ingredienti": [
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Farina media (200-240W)"
+        },
+        {
+            "quantita": 180,
+            "unita_descrizione": "g Acqua tiepida"
+        },
+        {
+            "quantita": 90,
+            "unita_descrizione": "g Latte intero"
+        },
+        {
+            "quantita": 10,
+            "unita_descrizione": "g Malto diastasico"
+        },
+        {
+            "quantita": 13,
+            "unita_descrizione": "g Lievito di birra fresco"
+        },
+        {
+            "quantita": 10,
+            "unita_descrizione": "g Sale fino"
+        },
+        {
+            "quantita": 40,
+            "unita_descrizione": "g Olio EVO (o 50 g di burro)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Opzionale: per la glassatura"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Uova"
+        },
+        {
+            "quantita": 15,
+            "unita_descrizione": "g Panna fresca"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Nella planetaria munita di gancio, versare: farina, latte, lievito e il malto. Iniziare ad impastare a velocità bassa",
+            "icona": "gancio",
+            "tempo": "2 min.",
+            "velocita": "bassa"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Aggiungere l'acqua a filo alzando la velocità della planetaria. Con l'ultimo sorso di acqua, aggiungere anche il sale.",
+            "icona": "aggiungere",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Quando l'impasto è liscio, aggiungere l'olio e far girare finché l'impasto non si stacca dalle pareti della planetaria, che devono restare pulite.",
+            "icona": "aggiungere",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Stendere l'impasto creando un rettangolo spesso 3-4 cm e fare una piega a tre. Chiudere quindi i lati a libro piegandoli sotto l'impasto.",
+            "icona": "mattarello",
+            "dimensione": "3-4 cm."
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Far lievitare 1 ora in un contenitore oliato.",
+            "icona": "lievitazione",
+            "temperatura": "26-28°C",
+            "tempo": "1 ora"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Stendere nuovamente l'impasto e ripetere la piega a 3 più i lati piegati sotto l'impasto.",
+            "icona": "mattarello",
+            "dimensione": "3-4 cm"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Far lievitare fino al raddoppio in un contenitore oliato.",
+            "icona": "lievitazione",
+            "temperatura": "26-28°C",
+            "tempo": "raddoppio"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Stendere l'impasto in un rettangolo largo quanto lo stampo da plumcake e spesso 1cm.\nArrotolare su ste stesso creando un cilindro stretto.",
+            "icona": "forma",
+            "dimensione": "1 cm."
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Posizionare il cilindro nello stampo (imburrato o con spray staccanti) e far lievitare fino al raddoppio.",
+            "icona": "lievitazione",
+            "temperatura": "26-28°C",
+            "tempo": "raddoppio"
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Spennellare con uovo e panna sbattuti insieme.",
+            "opzionale": true,
+            "icona": "spennellare"
+        },
+        {
+            "step_id": "step-11",
+            "testo": "Cuocere in forno statico, 180°C per 40/45 minuti.",
+            "icona": "forno_statico",
+            "temperatura": "180°C",
+            "tempo": "40-45 min."
+        }
+    ]
+}

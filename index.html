@@ -36,6 +36,10 @@
             <div id="testata-ricetta">
                 <button id="pulsante-indietro" onclick="chiudiAlgoritmo()">Torna al menu</button>
                 <h2 id="titolo-ricetta-corrente"></h2>
+                 <div id="pulsanti-esportazione" style="margin-bottom: 15px; display: flex; gap: 10px;">
+        <button class="btn-stampa" onclick="window.print()" style="background-color: #34495e; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;">🖨️ Salva/Stampa in PDF</button>
+        <button class="btn-stampa" onclick="esportaWord()" style="background-color: #2980b9; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;">📄 Scarica in Word</button>
+    </div>
                 <button id="pulsante-toggle-vista" onclick="cambiaVista()">Mostra algoritmo</button>
             </div>
             

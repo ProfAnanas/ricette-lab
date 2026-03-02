@@ -58,6 +58,13 @@
     "url_dati": "data/pasticceria/ricette_base/focaccia_indiretto.json",
     "anno": "2, 3",
     "tag": "pizza"
+},
+{
+    "id": "pan_bauletto",
+    "nome": "Pan Bauletto",
+    "url_dati": "data/pasticceria/ricette_base/pan_bauletto.json",
+    "anno": "3",
+    "tag": "pancarre, pan carre, panbauletto,"
 }
           ]
         },

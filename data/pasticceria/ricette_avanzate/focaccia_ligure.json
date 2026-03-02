@@ -77,7 +77,7 @@
         {
             "step_id": "step-11",
             "testo": "Versare metà della salamoia sulla focaccia.\nAffonda energicamente le dita per creare i buchi caratteristici, senza bucare l'impasto.\nVersare la restante salamoia riempiendo bene i buchi.",
-            "testo_nodo": "NON BUCARE L'IMPASTO"
+            "icona": "versare"
         },
         {
             "step_id": "step-12",

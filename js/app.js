@@ -81,7 +81,7 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
         const response = await fetch(urlDati);
         if (!response.ok) throw new Error('File ricetta non trovato');
         const ricetta = await response.json();
-        
+        window.ricettaCorrente = ricetta; // Memorizza i dati per poterli esportare in Word
         const listaIngredienti = document.getElementById('lista-ingredienti');
         const listaProcedimento = document.getElementById('lista-procedimento');
         const pannelloAlgoritmo = document.getElementById('pannello-algoritmo');
@@ -553,4 +553,60 @@ if (campoRicerca) {
 }
 if (filtroAnno) {
     filtroAnno.addEventListener('change', applicaFiltri); 
+}
+
+function esportaWord() {
+    if (!window.ricettaCorrente) return alert("Nessuna ricetta caricata!");
+    const r = window.ricettaCorrente;
+
+    // Costruisce la struttura di base del file Word
+    let html = `<html xmlns:w="urn:schemas-microsoft-com:office:word">
+                <head><meta charset="utf-8"><title>${r.titolo}</title></head>
+                <body style="font-family: Arial, sans-serif; color: #000;">`;
+
+    html += `<h1>${r.titolo}</h1>`;
+
+    if (r.nota_dosi) {
+        html += `<p><em>${r.nota_dosi}</em></p>`;
+    }
+
+    // Elenco ingredienti
+    html += `<h2>Ingredienti</h2><ul>`;
+    r.ingredienti.forEach(ing => {
+        if (ing.quantita) {
+            html += `<li><strong>${ing.quantita}</strong> ${ing.unita_descrizione}</li>`;
+        } else {
+            const desc = typeof ing === 'object' ? ing.unita_descrizione : ing;
+            html += `<li><em>${desc}</em></li>`;
+        }
+    });
+    html += `</ul>`;
+
+    // Elenco procedimento
+    html += `<h2>Procedimento</h2><ol>`;
+    r.procedimento.forEach(passaggio => {
+        if (passaggio.tipo === 'bivio') {
+            html += `<li><strong>Bivio:</strong><ul>`;
+            passaggio.rami.forEach(ramo => html += `<li>${ramo.testo}</li>`);
+            html += `</ul></li>`;
+        } else if (passaggio.tipo === 'parallelo') {
+            html += `<li><strong>In contemporanea:</strong><ul>`;
+            passaggio.rami.forEach(ramo => html += `<li>${ramo.testo}</li>`);
+            html += `</ul></li>`;
+        } else {
+            let prefisso = passaggio.opzionale ? "<em>(Opzionale)</em> " : "";
+            html += `<li>${prefisso}${passaggio.testo}</li>`;
+        }
+    });
+    html += `</ol></body></html>`;
+
+    // Genera il file e fa partire il download automatico
+    const blob = new Blob(['\ufeff', html], { type: 'application/msword' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `${r.id}.doc`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 }

@@ -136,7 +136,7 @@
             "tempo": "30-60 min."
         },
         {
-            "tipo": "bivio",
+            "tipo": "parallelo",
             "rami": [
                 {
                     "step_id": "step-10a",
@@ -145,14 +145,15 @@
                 },
                 {
                     "step_id": "step-10b",
-                    "testo": "Preparare la salamoia unendo insieme: acqua, olio e sale. Mescolare bene fino a creare un emulsione."
+                    "testo": "Preparare la salamoia unendo insieme: acqua, olio e sale. Mescolare bene fino a creare un emulsione.",
+                    "icona": "aggiungere"
                 }
             ]
         },
         {
             "step_id": "step-11",
             "testo": "Versare la salamoia nella focaccia facendo attenzione che non finisca sotto l'impasto.",
-            "icona": "aggiungere"
+            "icona": "versare"
         },
         {
                     "step_id": "step-12",
