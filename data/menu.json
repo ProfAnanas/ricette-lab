@@ -65,6 +65,13 @@
     "url_dati": "data/pasticceria/ricette_base/pan_bauletto.json",
     "anno": "3",
     "tag": "pancarre, pan carre, panbauletto,"
+},
+{
+    "id": "pasta_brioche",
+    "nome": "Pasta Brioche",
+    "url_dati": "data/pasticceria/ricette_base/pasta_brioche.json",
+    "anno": "3, 4",
+    "tag": "panbrioche"
 }
           ]
         },

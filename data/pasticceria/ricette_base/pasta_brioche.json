@@ -1,0 +1,116 @@
+{
+    "id": "pasta_brioche",
+    "titolo": "Pasta Brioche",
+    "nota_dosi": "impasto base dolce o salato",
+    "ingredienti": [
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Farina media (240-260W)"
+        },
+        {
+            "quantita": 230,
+            "unita_descrizione": "g Latte intero (o Acqua)"
+        },
+        {
+            "quantita": 90,
+            "unita_descrizione": "g Zucchero"
+        },
+                {
+            "quantita": null,
+            "unita_descrizione": "Se brioche salata, zucchero solo 30g su 500g di farina"
+        },
+        {
+            "quantita": 4,
+            "unita_descrizione": "n° Tuorli"
+        },
+        {
+            "quantita": 25,
+            "unita_descrizione": "g Lievito di birra fresco"
+        },
+        {
+            "quantita": 10,
+            "unita_descrizione": "g Miele"
+        },
+        {
+            "quantita": 2,
+            "unita_descrizione": "g Sale fino"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Burro 82% materia grassa"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Aromi a piacere (vaniglia, arancia, limone, ecc.)"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In planetaria munita di gancio, impastare: farina, lievito, tuorli, zucchero, miele e latte.",
+            "icona": "gancio",
+            "velocita": "bassa"
+        },
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-2a",
+                    "testo": "Quando l'impasto inizia ad essere liscio ed omogeneo, inserire il sale e gli aromi.\nContinuare ad impastare fino a che l'impasto si incorda.",
+                    "icona": "gancio",
+                    "velocita": "media"
+                },
+                {
+                    "step_id": "step-2b",
+                    "testo": "Tagliare il burro in tocchetti e lasciarlo in frigorifero (deve essere freddo per l'inserimento nell'impasto)",
+                    "icona": "tagliare",
+                    "dimensione": "4-5 cm"
+                }
+            ]
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Aggiungere il burro in 3-4 volte (aspettare che i pezzi siano stati assorbiti prima di inserire i successivi).",
+            "icona": "aggiungere",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Trasferire il composto in un contenitore chiuso (o camera di lievitazione umida) e far lievitare per 30 minuti.",
+            "icona": "lievitazione",
+            "temperatura": "26-28°C",
+            "tempo": "30 min."
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Porzionare l'impasto secondo la ricetta desiderata.",
+            "icona": "porzionare"
+        },
+                {
+            "step_id": "step-8",
+            "testo": "Appiattire ogni pallina (o stendere l'impasto intero), farcirlo a piacere e richiudere bene l'impasto.",
+            "icona": "mattarello",
+            "opzionale": true
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Far lievitare almeno un'ora.",
+            "icona": "lievitazione",
+            "tempo": "1 ora"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Spennellare la/le brioche con uovo sbattuto (o latte e uovo o panna e uovo)",
+            "opzionale": true,
+            "icona": "spennellare"
+        },
+
+        {
+            "step_id": "step-9",
+            "testo": "Cuocere a 170°C , la temperatura al cuore deve raggiungere i 93°C",
+            "icona": "forno_statico",
+            "temperatura": "170°C",
+            "tempo": "92-94°C al cuore."
+        }
+    ]
+}
