@@ -48,7 +48,7 @@
             {
     "id": "focaccia_diretto",
     "nome": "Focaccia (Impasto Diretto)",
-    "url_dati": "data/pasticceria/ricette_base/focaccia-diretto.json",
+    "url_dati": "data/pasticceria/ricette_base/focaccia_diretto.json",
     "anno": "1, 2, 3",
     "tag": "pizza, biga"
 }
