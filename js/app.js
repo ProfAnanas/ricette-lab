@@ -100,7 +100,7 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
             const notaEl = document.createElement('div');
             notaEl.id = 'nota-dosi-ricetta';
             notaEl.classList.add('badge-nota-dosi');
-            notaEl.innerHTML = `<span>📏 ${ricetta.nota_dosi}</span>`;
+            notaEl.innerHTML = `<span>${ricetta.nota_dosi}</span>`;
             
             // Lo inserisce esattamente prima dell'elenco ingredienti
             listaIngredienti.parentNode.insertBefore(notaEl, listaIngredienti);
@@ -214,7 +214,7 @@ ricetta.procedimento.forEach(passaggio => {
                 attivaSincronia(stepTesto, divNodo);
             }
         });
-        
+
     } catch (error) {
         console.error('Errore nel caricamento della ricetta:', error);
         document.getElementById('lista-ingredienti').innerHTML = '<li>Errore: Impossibile caricare i dati della ricetta.</li>';

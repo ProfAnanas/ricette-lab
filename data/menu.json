@@ -46,11 +46,18 @@
 },
             { "id": "frolla_milano", "nome": "Pasta frolla Milano", "url_dati": "data/pasticceria/ricette_base/frolla_milano.json","anno": "1, 2, 3", "tag": "crostata, biscotti, frollini, burro" },
             {
-    "id": "focaccia-diretto",
+    "id": "focaccia_diretto",
     "nome": "Focaccia (Impasto Diretto)",
-    "url_dati": "data/pasticceria/ricette_base/focaccia-diretto.json",
+    "url_dati": "data/pasticceria/ricette_base/focaccia_diretto.json",
     "anno": "1, 2, 3",
     "tag": "pizza, biga"
+},
+{
+    "id": "focaccia_indiretto",
+    "nome": "Focaccia con Poolish (Impasto Indiretto)",
+    "url_dati": "data/pasticceria/ricette_base/focaccia_indiretto.json",
+    "anno": "2, 3",
+    "tag": "pizza"
 }
           ]
         },

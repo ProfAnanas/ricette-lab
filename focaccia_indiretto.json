@@ -1,0 +1,172 @@
+{
+    "id": "focaccia_indiretto",
+    "titolo": "Focaccia con Poolish (Impasto Indiretto)",
+    "nota_dosi": "Per una teglia 30x40 (idratazione 70%)",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Per il Poolish"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Farina Forte (300W - Manitoba)"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Acqua a temperatura ambiente"
+        },
+        {
+            "quantita": 2,
+            "unita_descrizione": "g Lievito di birra fresco"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per l'impasto finale"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Tutto il Poolish più"
+        },
+        {
+            "quantita": 250,
+            "unita_descrizione": "g Farina 00 Media (240W)"
+        },
+        {
+            "quantita": 130,
+            "unita_descrizione": "g Acqua a temperatura ambiente"
+        },
+        {
+            "quantita": 8,
+            "unita_descrizione": "g Sale fine"
+        },
+        {
+            "quantita": 20,
+            "unita_descrizione": "g Olio EVO"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la salamoia"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Acqua"
+        },
+        {
+            "quantita": 70,
+            "unita_descrizione": "g Olio EVO"
+        },
+        {
+            "quantita": 8,
+            "unita_descrizione": "g Sale Fino"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Per il poolish: in una ciotola unire la farina, l'acqua e il lievito.",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Mescolare per sciogliere tutti i grumi di farina.",
+            "icona": "mescolare"
+        },
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-3a",
+                    "testo": "Far riposare a temperatura ambiente per 4-6 ore",
+                    "icona": "riposo",
+                    "temperatura": "ambiente",
+                    "tempo": "4-6 ore"
+                },
+                {
+                    "step_id": "step-3b",
+                    "testo": "Far riposare in frigorifero fino a 24 ore.",
+                    "icona": "frigorifero",
+                    "temperatura": "+4°C",
+                    "tempo": "fino a 24 ore"
+                }
+            ]
+        },
+        {
+            "step_id": "step-4",
+            "testo": "In planetaria munita di gancio, versare il poolish, la farina e quasi tutta l'acqua. Impastare a velocità bassa",
+            "icona": "gancio",
+            "velocita": "bassa"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Aggiungere il sale e l'ultima parte di acqua",
+            "icona": "aggiungere",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Aggiungere l'olio in due volte",
+            "icona": "aggiungere",
+            "velocita": "media"
+        },
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-7a",
+                    "testo": "Rovesciare l'impasto sul banco da lavoro, dare una forma più o meno tonda, senza lavorarlo troppo e far riposare 40 minuti.",
+                    "icona": "riposo",
+                    "tempo": "40 min."
+                },
+                {
+                    "step_id": "step-7b",
+                    "testo": "Ungere bene una teglia 30x40",
+                    "icona": "aggiungere"
+                }
+            ]
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Stendere l'impasto nella teglia, se non arriva subito ai bordi aspettare 10 minuti e ripetere.",
+            "icona": "mattarello"
+        },
+                {
+            "step_id": "step-9",
+            "testo": "Far lievitare 30-60 minuti a temperatura di 24-26°C",
+            "icona": "lievitazione",
+            "tempo": "30-60 min."
+        },
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-10a",
+                    "testo": "Praticare i buchi nella focaccia senza bucare l'impasto.",
+                    "icona": "impastare_mano"
+                },
+                {
+                    "step_id": "step-10b",
+                    "testo": "Preparare la salamoia unendo insieme: acqua, olio e sale. Mescolare bene fino a creare un emulsione."
+                }
+            ]
+        },
+        {
+            "step_id": "step-11",
+            "testo": "Versare la salamoia nella focaccia facendo attenzione che non finisca sotto l'impasto.",
+            "icona": "aggiungere"
+        },
+        {
+                    "step_id": "step-12",
+                    "testo": "Far riposare 10-15 minuti.",
+                    "icona": "riposo",
+                    "tempo": "10-15 min."
+                },
+
+        {
+            "step_id": "step-13",
+            "testo": "Cuocere in forno a 230°C per 15-20 minuti.",
+            "icona": "forno_ventilato",
+            "temperatura": "230°C",
+            "tempo": "15-20 min."
+        }
+    ]
+}

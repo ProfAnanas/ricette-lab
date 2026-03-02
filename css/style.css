@@ -747,11 +747,12 @@ body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) .numero-step {
     border: 1px dashed #e67e22;
 }
 
-/* Stile per i nodi opzionali */
+/* Stile per i nodi opzionali (effetto fantasma) */
 .nodo-visivo.nodo-opzionale {
-    border-style: dashed !important; /* Forza il bordo a diventare tratteggiato mantenendo il colore dell'icona */
-    border-width: 3px;
-    opacity: 0.85; /* Lo rende leggermente più trasparente per indicare minore priorità */
+    border-style: solid !important; /* Mantiene il bordo continuo per non confondersi con bivi o paralleli */
+    opacity: 0.55; /* Rende l'icona e il bordo semitrasparenti */
+    transform: scale(0.85); /* Rimpicciolisce il nodo per ridurne il peso visivo */
+    filter: grayscale(50%); /* Spegne leggermente i colori */
 }
 
 /* Etichetta testuale a sinistra */
@@ -771,15 +772,6 @@ body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) .numero-step {
     border-left: 3px solid #9b59b6; /* Un colore viola per distinguerlo dal bivio arancione */
     padding-left: 10px;
     margin-bottom: 15px;
-}
-
-.blocco-parallelo-testo::before {
-    content: "IN CONTEMPORANEA:";
-    display: block;
-    font-size: 0.8em;
-    color: #9b59b6;
-    font-weight: bold;
-    margin-bottom: 5px;
 }
 
 /* Contenitore dei nodi visivi in parallelo */
