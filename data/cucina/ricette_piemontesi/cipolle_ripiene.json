@@ -1,0 +1,93 @@
+{
+    "id": "cipolle_ripiene",
+    "titolo": "Cipolle ripiene alla moda di Alba",
+    "ingredienti": [
+        {
+            "quantita": 6,
+            "unita_descrizione": "n° Cipolle medie bionde"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Salsiccia"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Toma"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Olio EVO"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Pangrattato o Formaggio Grattugiato"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale Fino"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Lavare le cipolle",
+            "icona": "lavare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Cuocere le cipolle in forno misto a 120°C con sonda al cuore a 85°C.",
+            "icona": "forno_vapore",
+            "temperatura": "120°C",
+            "tempo": "85°C al cuore"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Abbattere in positivo fino a raffreddamento",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Tagliare la parte superiore, come se fosse un coperchio (METTERE DA PARTE PER DOPO). Svuotare l’interno della cipolla con lo scavino, facendo attenzione a non bucare il fondo.",
+            "icona": "tagliare"
+        },
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-5a",
+                    "testo": "In una padella con un filo d'olio, fare appassire la polpa rimossa dalla cipolla fino a che non si sfaldi",
+                    "icona": "padella",
+                    "temperatura": "bassa"
+                },
+                {
+                    "step_id": "step-5b",
+                    "testo": "Togliere il budello alla salsiccia e dividere in pezzi piccoli. Tagliare la toma a cubetti",
+                    "icona": "tagliare",
+                    "dimensione": "1-2 cm"
+                }
+            ]
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Unire la toma e la salsiccia alla cipolla cotta.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Riempire le cipolle con il composto di cipolla, salsiccia e toma.",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Tamponare la superficie nel pan pesto o nel grana.",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Far gratinare le cipolle in forno. (Servire appoggiando il \"coperchietto\" sulle rispettive cipolle)",
+            "icona": "forno_statico",
+            "temperatura": "Grill"
+        }
+    ]
+}

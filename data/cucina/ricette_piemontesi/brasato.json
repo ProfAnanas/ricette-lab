@@ -1,0 +1,101 @@
+{
+    "id": "brasato",
+    "titolo": "Brasato al vino rosso con purea di patate",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Per il brasato"
+        },
+        {
+            "quantita": 400,
+            "unita_descrizione": "g Polpa di bovino adulto"
+        },
+        {
+            "quantita": 500,
+            "unita_descrizione": "ml Vino rosso"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Carota, cipolla, sedano (50g-50g-50g)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Rosmarino"
+        },
+                {
+            "quantita": null,
+            "unita_descrizione": "Sale, Pepe"
+        },
+                {
+            "quantita": null,
+            "unita_descrizione": "Opzionale: spezie (ginepro, chiodi di garofano, cannella, ecc.)"
+        },
+        {
+            "quantita": 2000,
+            "unita_descrizione": "ml Fondo bianco o vegetale"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la purea"
+        },
+        {
+            "quantita": 1000,
+            "unita_descrizione": "g Patate"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Latte"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Burro"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Grana Padano DOP"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale"
+        }
+    ],
+    "procedimento": [
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-1a",
+                    "testo": "Parare la polpa di bovino",
+                    "icona": "tagliare"
+                },
+                {
+                    "step_id": "step-1b",
+                    "testo": "Lavare, mondare e tagliare le verdure a pezzi",
+                    "icona": "tagliare"
+                }
+            ]
+        },
+        {
+            "step_id": "step-2",
+            "testo": "In un tegame, rosolare la carne con le verdure e un filo d'olio.",
+            "icona": "tegame",
+            "temperatura": "alta"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Sfumare con il vino bianco e quando è evaporata la parte alcolica, aggiungere il fondo arrivando a coprire 3/4 della carne. Coprire con coperchio e proseguire la cottura lentamente (aggiungere fondo quando si riduce).",
+            "icona": "tegame",
+            "temperatura": "bassa"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Preparare la purea lessando le patate, passandole e aromatizzandole con latte bollente, burro e grana.",
+            "icona": "pentolino"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Quando la carne è cotta, Passare il fondo, farlo stringere e legare con della maizena sciolta in poca acqua.",
+            "icona": "mixer"
+        }
+    ]
+}

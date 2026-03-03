@@ -1,0 +1,123 @@
+{
+    "id": "pane_diretto",
+    "titolo": "Pane (impasto diretto)",
+    "nota_dosi": "idratazione 60%",
+    "ingredienti": [
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Farina 00"
+        },
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Farina forte (Manitoba)"
+        },
+        {
+            "quantita": 600,
+            "unita_descrizione": "g Acqua"
+        },
+        {
+            "quantita": 25,
+            "unita_descrizione": "g Lievito di birra fresco"
+        },
+        {
+            "quantita": 15,
+            "unita_descrizione": "g Sale"
+        },
+        {
+            "quantita": 15,
+            "unita_descrizione": "g Malto diastasico (opzionale)"
+        },
+        {
+            "quantita": 40,
+            "unita_descrizione": "g Olio EVO (opzionale)"
+        }
+    ],
+    "procedimento": [
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-1a",
+                    "testo": "Inserire tutta la farina nella ciotola della planetaria munita di gancio",
+                    "icona": "gancio"
+                },
+                {
+                    "step_id": "step-1b",
+                    "testo": "Sciogliere il cubetto di lievito e il malto in circa 550 g di acqua",
+                    "icona": "mescolare"
+                }
+            ]
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Versare l'acqua con il lievito sciolto nella farina e iniziare a impastare a velocità bassa e pian piano alzarla fino a media.",
+            "icona": "gancio",
+            "velocita": "bassa poi media"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Quando la farina ha assorbito i liquidi e l'impasto inizia a prendere corda, aggiungere l'olio in due sorsi.",
+            "icona": "gancio",
+            "velocita": "media"
+        },
+                {
+            "step_id": "step-4",
+            "testo": "Aggiungere il sale e i 50 g di acqua tenuti da parte. Alzare la velocità della planetaria e impastare fino a incordatura completa.",
+            "icona": "gancio",
+            "velocita": "alta"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Rovesciare l'impasto sul banco di lavoro. Dargli un giro di pieghe per rinforzare la struttura e pirlarlo formando una palla tesa. Riporlo in un contenitore capiente leggermente unto e far lievitare a circa 26°C fino al raddoppio del volume iniziale (con questa dose di lievito, ci vorranno circa 60-90 minuti).",
+            "icona": "lievitazione",
+            "temperatura": "26°C",
+            "tempo": "60-90 min."
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Rovesciare l'impasto lievitato sul banco leggermente infarinato, sgonfiandolo il meno possibile. Spezzare l'impasto nella grammatura desiderata. Procedere alla formatura dando una preforma rotonda, attendere 10 minuti di riposo",
+            "icona": "forma",
+            "tempo": "10 min riposo."
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Formare il filone o la pagnotta definitiva, assicurandosi di sigillare bene la chiusura inferiore e dare massima tensione alla superficie superiore.",
+            "icona": "forma"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Posizionare le pagnotte formate su teglie rivestite di carta forno (o negli appositi cestini di lievitazione ben infarinati, con la chiusura rivolta verso l'alto). Coprire per evitare la formazione della crosta e lasciar lievitare a 28°C fino a quando, premendo leggermente la pasta con un dito, l'impronta torna indietro molto lentamente (circa 45-60 minuti)",
+            "icona": "lievitazione",
+            "tempo": "45-60 min."
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Praticare un'incisione decisa e netta sulla superficie del pane utilizzando una lametta . Questo permetterà al pane di svilupparsi in forno senza strapparsi in modo irregolare.",
+            "opzionale": true,
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Cuocere in forno modalità: misto ad una temperatura di 220°C con umidità: 30% - 40%. Tempo: 15 minuti.",
+            "icona": "forno_vapore",
+            "temperatura": "220°C misto.",
+            "tempo": "15 min",
+            "velocita": "umidità 30-40%"
+        },
+        {
+            "step_id": "step-11",
+            "testo": "Abbassare il forno a 200°C, Modalità solo secco. Umidità: 0%. Tempo: 15-20 minuti.",
+            "icona": "forno_ventilato",
+            "temperatura": "200°C",
+            "tempo": "15-20 min.",
+            "velocita": "umidità 0%"
+        },
+        {
+            "step_id": "step-12",
+            "testo": "Terminare la cottura per 10 minuti estraendo tutta l'umidità dal forno (deumidificazione al 100%)",
+            "temperatura": "200°C",
+            "tempo": "10 min.",
+            "velocita": "Deumidificazione"
+        }
+    ]
+}

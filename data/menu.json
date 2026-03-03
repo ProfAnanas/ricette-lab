@@ -27,6 +27,88 @@
               "tag": "uova, ravioli, agnolotti, tagliatelle, pasta fresca"
             }
           ]
+        },
+                {
+          "nome_sottocategoria": "Ricette piemontesi",
+          "preparazioni": [
+          {
+          "id": "rissoles",
+          "nome": "Rissoles ai profumi dell'orto",
+          "url_dati": "data/cucina/ricette_piemontesi/rissoles.json",
+          "anno": "3",
+          "tag": "sfoglia, ricotta, piemonte"
+          },
+{
+    "id": "cipolle_ripiene",
+    "nome": "Cipolle ripiene alla moda di Alba",
+    "url_dati": "data/cucina/ricette_piemontesi/cipolle_ripiene.json",
+    "anno": "3",
+    "tag": "cipolla, piemonte"
+},
+{
+    "id": "bagna_caoda",
+    "nome": "Bagna caoda con pinzimonio di verdure",
+    "url_dati": "data/cucina/ricette_piemontesi/bagna_caoda.json",
+    "anno": "3",
+    "tag": "acciughe, piemonte"
+},
+{
+    "id": "plin_arrosti",
+    "nome": "Ravioli al plin ai tre arrosti",
+    "url_dati": "data/cucina/ricette_piemontesi/plin_arrosti.json",
+    "anno": "3",
+    "tag": "agnolotti, piemonte"
+},
+{
+    "id": "risotto_porri_toma",
+    "nome": "Risotto ai porri e toma del lait brusc",
+    "url_dati": "data/cucina/ricette_piemontesi/risotto_porri_toma.json",
+    "anno": "3",
+    "tag": "piemonte, riso, castelmagno, porro"
+},
+{
+    "id": "trota_incrosta",
+    "nome": "Trota fario in crosta con spinacini e crema di peperoni",
+    "url_dati": "data/trota_incrosta.json",
+    "anno": "3",
+    "tag": "pesce, piemonte"
+},
+{
+    "id": "brasato",
+    "nome": "Brasato al vino rosso con purea di patate",
+    "url_dati": "data/cucina/ricette_piemontesi/brasato.json",
+    "anno": "3",
+    "tag": "barolo"
+},
+{
+    "id": "torta_langarola",
+    "nome": "Torta langarola (torta di nocciole)",
+    "url_dati": "data/cucina/ricette_piemontesi/torta_langarola.json",
+    "anno": "3",
+    "tag": "tonda gentile trilobata, nocciola igp, alba, cuneo"
+},
+{
+    "id": "bonet",
+    "nome": "Bonet",
+    "url_dati": "data/cucina/ricette_piemontesi/bonet.json",
+    "anno": "1, 2, 3",
+    "tag": "bunet, amaretti, piemonte"
+},
+{
+    "id": "grissini_stirati",
+    "nome": "Grissini torinesi stirati",
+    "url_dati": "data/cucina/ricette_piemontesi/grissini_stirati.json",
+    "anno": "3",
+    "tag": "rubata, piemonte"
+},
+{
+    "id": "pane_diretto",
+    "nome": "Pane (impasto diretto)",
+    "url_dati": "data/cucina/ricette_piemontesi/pane_diretto.json",
+    "anno": "1, 2, 3",
+    "tag": "pagnotta, lievito"
+}
+          ]
         }
       ]
     },

@@ -1,0 +1,135 @@
+{
+    "id": "rissoles",
+    "titolo": "Rissoles ai profumi dell'orto",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la pasta sfoglia"
+        },
+                {
+            "quantita": null,
+            "unita_descrizione": "Per il Pastello"
+        },
+        {
+            "quantita": 170,
+            "unita_descrizione": "g Farina forte (300W - Manitoba)"
+        },
+                {
+            "quantita": 75,
+            "unita_descrizione": "g Acqua fredda"
+        },
+                {
+            "quantita": 2,
+            "unita_descrizione": "g Sale"
+        },
+                {
+            "quantita": null,
+            "unita_descrizione": "Per il panetto"
+        },
+                {
+            "quantita": 250,
+            "unita_descrizione": "g Burro freddo"
+        },
+                {
+            "quantita": 80,
+            "unita_descrizione": "g Farina 00 (debole)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per le Rissoles"
+        },
+        {
+            "quantita": 125,
+            "unita_descrizione": "g Ricotta"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Verdura a scelta saltata"
+        },
+        {
+            "quantita": 30,
+            "unita_descrizione": "g Parmigiano Reggiano DOP grattugiato"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale e Pepe"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per lucidare"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Uova"
+        }
+    ],
+    "procedimento": [
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-1a",
+                    "testo": "Impastare la farina forte con l'acqua fino a creare un impasto liscio (PASTELLO)",
+                    "icona": "impastare_mano"
+                },
+                {
+                    "step_id": "step-1b",
+                    "testo": "Impastare il burro con la farina debole. (PANETTO) L'impasto non deve essere lavorato e scaldato troppo.\nAppiattire poi il panetto dandogli una forma rettangolare quando più regolare possibile, spesso 3-4 cm.",
+                    "icona": "impastare_mano"
+                }
+            ]
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Riporre entrambi i panetti in abbattitore positivo finché non saranno freddi.",
+            "icona": "frigorifero",
+            "tempo": "fino a raffreddamento"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Stendere il pastello ad uno spessore di 3-4mm, mettere al centro il panetto. Dopodiché chiudere i 4 lati del pastello sopra il panetto in modo da sigillarlo. Stendere quindi nuovamente ad uno spessore di 3-4cm e abbattere in positivo.",
+            "icona": "mattarello",
+            "temperatura": "+4°C",
+            "dimensione": "3-4cm"
+        },
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-4a",
+                    "testo": "Fare le pieghe: 3-4-3 Abbattendo in positivo tra una piega e l'altra per raffreddare l'impasto.\nDopo ogni piega ruotare di 90°C l'impasto e fare pieghe nel senso opposto al precedente.\nPiega a 3: stendere la pasta creando un rettangolo. Portare un lato della pasta verso il centro quindi chiudere sopra l'altro lato.\nPiega a 4: chiudere ogni lato di pasta verso il centro quindi sovrapporlo ancora su ste stesso.",
+                    "icona": "mattarello",
+                    "temperatura": "+4°C",
+                    "dimensione": "1-2cm"
+                },
+                {
+                    "step_id": "step-4b",
+                    "testo": "Amalgamare la ricotta con il parmigiano e le verdure tritate (se sono troppo acquose strizzarle). Aggiustare di sale e pepe.",
+                    "icona": "mescolare"
+                }
+            ]
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Stendere la pasta e formare dei cerchi di 10-15 cm di diametro.",
+            "icona": "mattarello",
+            "dimensione": "10-15 cm"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Farcire con uno spuntone di ripieno.",
+            "icona": "sac"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Spennellare d’uovo il bordo del cerchio di pasta quindi chiudere su se stesso l'impasto a mezzaluna (oppure sovrapporre con un altro disco di pasta per lasciarlo a forma tonda) e pizzicare i bordi con una forchetta per evitare la fuoriuscita del ripieno.",
+            "icona": "spennellare"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Spennellare le rissoles con uovo sbattuto e cuocere a 170°C fino a doratura da entrambi i lati",
+            "icona": "forno_ventilato",
+            "temperatura": "170°C"
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+{
+    "id": "trota_incrosta",
+    "titolo": "Trota fario in crosta con spinacini e crema di peperoni",
+    "ingredienti": [
+        {
+            "quantita": 2,
+            "unita_descrizione": "n° trote"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Spinaci"
+        },
+        {
+            "quantita": 300,
+            "unita_descrizione": "g Pasta brisée"
+        },
+        {
+            "quantita": 2,
+            "unita_descrizione": "n° Peperoni"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Aglio"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Olio"
+        },
+                {
+            "quantita": 5,
+            "unita_descrizione": "g Maizena"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale, Pepe"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Pulire, eviscerare e sfilettare le trote",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Stendere la pasta brisée ed utilizzarla per avvolgere i filetti adagiati sopra agli spinaci, formando dei rotoli del diametro di 5-6cm.",
+            "icona": "mattarello",
+            "dimensione": "5-6cm"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Chiudere la pasta e spennellarla con uovo.",
+            "icona": "spennellare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Cuocere in forno a 170°C finché il cuore del prodotto non sia arrivato a 63°C",
+            "icona": "forno_ventilato",
+            "temperatura": "170°C",
+            "tempo": "63°C al cuore"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Spadellare i peperoni (senza farli annerire) con poco aglio ed olio di oliva",
+            "icona": "padella"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Passare al setaccio o frullare i peperoni",
+            "icona": "mixer"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Legare la salsa con mezzo cucchiaino di maizena.",
+            "icona": "montare"
+        }
+    ]
+}

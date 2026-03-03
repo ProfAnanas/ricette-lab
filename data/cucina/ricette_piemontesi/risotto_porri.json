@@ -1,0 +1,82 @@
+{
+    "id": "risotto_porri_toma",
+    "titolo": "Risotto ai porri e toma del lait brusc",
+    "ingredienti": [
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Riso Carnaroli"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Toma"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Porro (n°1 circa)"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "ml Vino bianco"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Burro"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Grana Padano DOP"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Verdure miste per brodo vegetale"
+        }
+    ],
+    "procedimento": [
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-1a",
+                    "testo": "Tagliare finemente i porri (mondati e lavati), stufarli e tenerli in disparte",
+                    "icona": "padella"
+                },
+                {
+                    "step_id": "step-1b",
+                    "testo": "Preparare un brodo vegetale. (ne servono 2 litri)"
+                }
+            ]
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Tostare il riso con poco olio in un tegame non troppo largo.",
+            "icona": "tegame"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Sfumare con il vino bianco e far evaporare la parte alcolica.",
+            "icona": "tegane"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Aggiungere 1l di brodo bollente e il porro stufato e far cuocere mantenendo appena il bollore.",
+            "icona": "tegame",
+            "tempo": "10 min."
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Completare la cottura aggiungendo a poco a poco il brodo necessario e mescolando frequentemente.",
+            "icona": "tegame"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "A cottura ultimata, spegnere la piastra/fuoco. Mantecare con burro e grana.",
+            "icona": "aggiungere",
+            "temperatura": "spento"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Per ultimo aggiungere la toma del Lait Brusc (o Castemagno o simile) sbriciolata sulla superficie del risotto.",
+            "icona": "aggiungere"
+        }
+    ]
+}

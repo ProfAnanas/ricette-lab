@@ -1,0 +1,110 @@
+{
+    "id": "bagna_caoda",
+    "titolo": "Bagna caoda con pinzimonio di verdure",
+    "ingredienti": [
+                {
+            "quantita": null,
+            "unita_descrizione": "Per la bagna caoda"
+        },
+        {
+            "quantita": 300,
+            "unita_descrizione": "ml Olio EVO (gusto delicato)"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Acciughe dissalate"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "n° spicchio d'aglio"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "ml Latte o Panna"
+        },
+        {
+            "quantita": 15,
+            "unita_descrizione": "g Farina di nocciole"
+        },
+
+        {
+            "quantita": null,
+            "unita_descrizione": "Per il pinzimonio"
+        },
+        {
+            "quantita": 2,
+            "unita_descrizione": "n° Patate medie"
+        },
+        {
+            "quantita": 2,
+            "unita_descrizione": "n° Cipolle bionde"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "n° Verza piccola"
+        },
+        {
+            "quantita": 2,
+            "unita_descrizione": "n° Carciofi"
+        },
+        {
+            "quantita": 2,
+            "unita_descrizione": "n° Gambi di sedano"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "n° Finocchio"
+        }
+    ],
+    "procedimento": [
+                {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-1a",
+                    "testo": "In un pentolino far cuocere in oliocottura l'aglio finché non si disfa del tutto. L'olio non deve superare mai i 100°C.",
+                    "icona": "pentolino",
+                    "temperatura": "<=100°C"
+                },
+                {
+                    "step_id": "step-1b",
+                    "testo": "Lavare e mondare le verdure.",
+                    "icona": "lavare"
+                }
+            ]
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Aggiungere le acciughe e far cuocere finché non si disfano del tutto.",
+            "icona": "aggiungere",
+            "temperatura": "<=100°C"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Aggiungere il latte e portare a lenta ebollizione fino a ridurre di 1/3 la bagna.",
+            "icona": "aggiungere",
+            "temperatura": "lenta ebollizione"
+        },
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-4a",
+                    "testo": "Tagliare le verdure da servire crude: finocchio, sedano e verza)",
+                    "icona": "tagliare"
+                },
+                {
+                    "step_id": "step-4b",
+                    "testo": "Sbollentare (o cuocere al vapore) le patate, le cipolle e i carciofi.",
+                    "icona": "forno_vapore"
+                }
+            ]
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Aggiungere la farina di nocciole e mescolare fino ad ottenere una consistenza cremosa.",
+            "icona": "aggiungere",
+            "temperatura": "bassa"
+        }
+    ]
+}

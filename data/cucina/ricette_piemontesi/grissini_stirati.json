@@ -1,0 +1,93 @@
+{
+    "id": "grissini_stirati",
+    "titolo": "Grissini torinesi stirati",
+    "ingredienti": [
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Farina media (280W)"
+        },
+        {
+            "quantita": 250,
+            "unita_descrizione": "g Acqua"
+        },
+        {
+            "quantita": 25,
+            "unita_descrizione": "g Lievito di birra fresco"
+        },
+        {
+            "quantita": 5,
+            "unita_descrizione": "g Malto diastasico"
+        },
+        {
+            "quantita": 10,
+            "unita_descrizione": "g Sale"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Olio EVO"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In planetaria munita di gancio inserire la farina, l'acqua, il lievito e il malto. Impastare 8 minuti a velocità bassa",
+            "icona": "gancio",
+            "tempo": "8 min.",
+            "velocita": "bassa"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Quando l'impasto inizia a staccarsi dalle pareti, unire l'olio e aumentare la velocità",
+            "icona": "gancio",
+            "tempo": "4 min.",
+            "velocita": "media"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Unire il sale e alzare la velocità",
+            "icona": "gancio",
+            "tempo": "5 min.",
+            "velocita": "alta"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Ribaltare l'impasto sul banco da lavoro, dare una forma tonda non troppo tirata e far riposare 5 minuti.",
+            "icona": "riposo",
+            "tempo": "5 min."
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Stendere l'impasto, cercando di ottenere una forma rettangolare e fare una piega a 3. (immaginare di dividere idealmente il rettangolo in tre parti uguali. Si prende il lembo destro e lo si piega verso il centro. Poi si prende il lembo sinistro e lo si sovrappone al precedente)",
+            "icona": "mattarello"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Far riposare l'impasto 5-6 minuti",
+            "icona": "riposo"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Girare l'impasto di 90° e fare nuovamente una piega a 3.",
+            "icona": "mattarello"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Oliare l'impasto, coprirlo con la pellicola e mettere a lievitare a 26-28°C fino al raddoppio.",
+            "icona": "lievitazione",
+            "temperatura": "26-28°C",
+            "tempo": "raddoppio"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Porzionare i grissini \"stirandoli\" e passandoli poi nella semola di grano duro.",
+            "icona": "porzionare"
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Cuocere in forno ventilato a 175-180°C per 18-20 minuti. gli ultimi 4-5 minuti a valvola aperta",
+            "icona": "forno_ventilato",
+            "temperatura": "175-180°C",
+            "tempo": "18-20 min."
+        }
+    ]
+}

@@ -1,0 +1,79 @@
+{
+    "id": "bonet",
+    "titolo": "Bonet",
+    "nota_dosi": "Per 9 stampini monoporzione",
+    "ingredienti": [
+        {
+            "quantita": 500,
+            "unita_descrizione": "ml Latte intero"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Uova"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Amaretti"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Cacao amaro in polvere"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Zucchero"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per il caramello"
+        },
+        {
+            "quantita": 150,
+            "unita_descrizione": "g Zucchero"
+        },
+        {
+            "quantita": 30,
+            "unita_descrizione": "g Acqua"
+        },
+        {
+            "quantita": 5,
+            "unita_descrizione": "g Succo di limone"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Preparare un caramello rosso (o bruno) portando lo zucchero a 165-170°C (non oltre perché brucerebbe) e versarlo sul fondo degli stampini.",
+            "icona": "pentolino",
+            "temperatura": "165-170°C"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Scaldare il latte insieme agli amaretti sbriciolati senza superare i 90°C",
+            "icona": "pentolino",
+            "temperatura": "90°C"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "In una ciotola mescolare bene le uova, il cacao e lo zucchero. Non devono montare ma solo sciogliere le polveri.",
+            "icona": "montare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Versare il latte caldo nell'apparecchio di uova.",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Versare il composto negli stampini.",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Cuocere gli stampini in forno a vapore a 85°C per 20 minuti circa.",
+            "icona": "forno_vapore",
+            "temperatura": "85°C",
+            "tempo": "20 min."
+        }
+    ]
+}

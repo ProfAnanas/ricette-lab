@@ -7,7 +7,7 @@ let catalogoCompleto = [];
 
 async function caricaMenu() {
     try {
-        const response = await fetch('data/menu.json');
+        const response = await fetch('menu.json?v=' + new Date().getTime());
         if (!response.ok) throw new Error('Errore nel caricamento del file menu.json');
         const data = await response.json();
         catalogoCompleto = data.catalogo;
@@ -78,7 +78,8 @@ async function apriAlgoritmo(idRicetta, urlDati, nomeRicetta) {
     if (btnToggle) btnToggle.textContent = 'Mostra algoritmo';
     
     try {
-        const response = await fetch(urlDati);
+        // Aggiungiamo un timestamp univoco per impedire la cache del browser
+        const response = await fetch(urlDati + '?v=' + new Date().getTime());
         if (!response.ok) throw new Error('File ricetta non trovato');
         const ricetta = await response.json();
         window.ricettaCorrente = ricetta; // Memorizza i dati per poterli esportare in Word

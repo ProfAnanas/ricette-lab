@@ -1,0 +1,117 @@
+{
+    "id": "plin_arrosti",
+    "titolo": "Ravioli al plin ai tre arrosti",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la pasta all'uovo"
+        },
+        {
+            "quantita": 500,
+            "unita_descrizione": "g Farina debole"
+        },
+        {
+            "quantita": 4,
+            "unita_descrizione": "n° Uova"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Olio EVO"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per il ripieno"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Pollo (coscia o sovra coscia)"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Capocollo di maiale"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Polpa di bovino adulto"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Verza"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sedano, Carota e Cipolla"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Formaggio grattugiato"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per servire"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Burro, Salvia, Formaggio grattugiato"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Preparare la pasta fresca e abbatterla in positivo (sottovuoto o pellicola)",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        },
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-2a",
+                    "testo": "Tagliare le carni a pezzi piccoli tutti uguali",
+                    "icona": "tagliare"
+                },
+                {
+                    "step_id": "step-2b",
+                    "testo": "Lavare, mondare e tagliare le verdure",
+                    "icona": "tagliare"
+                }
+            ]
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Arrostire le carni in padella o casseruola.",
+            "icona": "padella"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Aggiungere le verdure e proseguire la cottura fino a che sia la carne che le verdure siano tenere.",
+            "icona": "padella"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Abbattere il ripieno in positivo fino a raffreddamento.",
+            "temperatura": "+4°C"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Macinare il ripieno e aggiustare il gusto con sale, pepe e formaggio grattugiato.\nTrasferire quindi in sac-a-poche",
+            "icona": "mixer"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Stendere la pasta poco alla volta (per evitare che secchi), disporre il ripieno e formare i plin.",
+            "icona": "mattarello"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Cuocere i plin in acqua bollente salata.",
+            "icona": "pentola_alta",
+            "temperatura": "100°C"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Servire con burro emulsionato a caldo, aromatizzato con salvia, sale e formaggio grattugiato.",
+            "icona": "padella"
+        }
+    ]
+}

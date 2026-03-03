@@ -1,0 +1,96 @@
+{
+    "id": "torta_langarola",
+    "titolo": "Torta langarola (torta di nocciole)",
+    "nota_dosi": "per una tortiera di 24-26 cm.",
+    "ingredienti": [
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Farina 00"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Zucchero"
+        },
+                {
+            "quantita": 200,
+            "unita_descrizione": "g Burro morbido"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Farina di nocciole"
+        },
+        {
+            "quantita": 50,
+            "unita_descrizione": "g Amaretti secchi"
+        },
+        {
+            "quantita": 4,
+            "unita_descrizione": "n° Uova"
+        },
+        {
+            "quantita": 125,
+            "unita_descrizione": "ml Latte intero"
+        },
+        {
+            "quantita": 16,
+            "unita_descrizione": "g Baking (lievito chimico)"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In una terrina, mescolare lo zucchero con i tuorli. No devono montare ma solo sciogliersi lo zucchero.",
+            "icona": "montare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Aggiungere il burro morbido e frustare fino a creare un composto morbido e un po' montato.",
+            "icona": "montare"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Aggiungere il latte.",
+            "icona": "montare"
+        },
+        {
+            "tipo": "parallelo",
+            "rami": [
+                {
+                    "step_id": "step-4a",
+                    "testo": "Setacciare la farina",
+                    "icona": "setacciare"
+                },
+                {
+                    "step_id": "step-4b",
+                    "testo": "Montare gli albumi a neve ben ferma (becco di uccello)"
+                }
+            ]
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Aggiungere la farina al composto principale mescolando dal basso verso l'alto con una marisa.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Unire gli albumi al composto alternandoli con le nocciole e gli amaretti sbriciolati.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Aggiungere per ultimo il lievito."
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Imburrare e infarinare una teglia da 24-26cm quindi versare l'impasto all'interno.",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Cuocere in forno a 180-200°C per circa 30 minuti.",
+            "icona": "forno_statico",
+            "temperatura": "180-200°C",
+            "tempo": "30 min."
+        }
+    ]
+}

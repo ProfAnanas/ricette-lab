@@ -548,7 +548,7 @@ body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) .numero-step {
 
 /* Categoria Verde */
 .nodo-visivo.tipo-foglia, .nodo-visivo.tipo-frusta, .nodo-visivo.tipo-gancio, 
-.nodo-visivo.tipo-mescolare, .nodo-visivo.tipo-montare {
+.nodo-visivo.tipo-mescolare, .nodo-visivo.tipo-montare, .nodo-visivo.tipo-versa, .nodo-visivo.tipo-porzionare {
     border-color: #2ecc71;
     background-color: #f0fbf4;
 }
@@ -582,24 +582,25 @@ body.modalita-algoritmo .step-ricetta:has(.mostra-testo-popup) .numero-step {
 /* Categoria Rosso */
 .nodo-visivo.tipo-forno_statico, .nodo-visivo.tipo-forno_vapore, 
 .nodo-visivo.tipo-forno_ventilato, .nodo-visivo.tipo-padella, 
-.nodo-visivo.tipo-pentola_alta, .nodo-visivo.tipo-pentolino {
+.nodo-visivo.tipo-pentola_alta, .nodo-visivo.tipo-pentolino, .nodo-visivo.tipo-tegame {
     border-color: #e74c3c;
     background-color: #fdf2f0;
 }
 .nodo-visivo.tipo-forno_statico.nodo-attivo, .nodo-visivo.tipo-forno_vapore.nodo-attivo, 
 .nodo-visivo.tipo-forno_ventilato.nodo-attivo, .nodo-visivo.tipo-padella.nodo-attivo, 
-.nodo-visivo.tipo-pentola_alta.nodo-attivo, .nodo-visivo.tipo-pentolino.nodo-attivo {
+.nodo-visivo.tipo-pentola_alta.nodo-attivo, .nodo-visivo.tipo-pentolino.nodo-attivo, .nodo-visivo.tipo-tegame.nodo-attivo {
     background-color: #e74c3c;
     color: white;
 }
 
 /* Categoria Giallo */
-.nodo-visivo.tipo-pimer, .nodo-visivo.tipo-mixer, .nodo-visivo.tipo-tagliare, .nodo-visivo.tipo-impastare_mano {
+.nodo-visivo.tipo-pimer, .nodo-visivo.tipo-mixer, .nodo-visivo.tipo-tagliare, .nodo-visivo.tipo-impastare_mano, .nodo-visivo.tipo-spennellare {
     border-color: #f1c40f;
     background-color: #fef9e7;
 }
 .nodo-visivo.tipo-pimer.nodo-attivo, .nodo-visivo.tipo-mixer.nodo-attivo, 
-.nodo-visivo.tipo-tagliare.nodo-attivo, .nodo-visivo.tipo-impastare_mano.nodo-attivo {
+.nodo-visivo.tipo-tagliare.nodo-attivo, .nodo-visivo.tipo-impastare_mano.nodo-attivo,
+.nodo-visivo.tipo-spennellare.nodo-attivo {
     background-color: #f1c40f;
     color: #2c3e50;
 }
