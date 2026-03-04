@@ -7,7 +7,7 @@ let catalogoCompleto = [];
 
 async function caricaMenu() {
     try {
-        const response = await fetch('menu.json?v=' + new Date().getTime());
+        const response = await fetch('data/menu.json?v=' + new Date().getTime());
         if (!response.ok) throw new Error('Errore nel caricamento del file menu.json');
         const data = await response.json();
         catalogoCompleto = data.catalogo;
@@ -610,4 +610,11 @@ function esportaWord() {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+}
+function forzaAggiornamentoApp() {
+    // Genera un numero casuale basato sull'orario
+    const timestamp = new Date().getTime();
+    
+    // Ricarica la pagina principale aggiungendo il parametro per ingannare la cache del browser
+    window.location.href = window.location.pathname + '?clear=' + timestamp;
 }
