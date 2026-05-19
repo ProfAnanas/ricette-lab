@@ -1,0 +1,271 @@
+{
+    "id": "gelato_fiordilatte",
+    "titolo": "Gelato base fiordilatte (e varianti)",
+    "nota_dosi": "per 1 kg di miscela",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Base fiordilatte",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 640,
+                    "unita_descrizione": "g Latte fresco intero"
+                },
+                {
+                    "quantita": 140,
+                    "unita_descrizione": "g Panna fresca liquida 35% grassi min."
+                },
+                {
+                    "quantita": 140,
+                    "unita_descrizione": "g Zucchero semolato (saccarosio)"
+                },
+                {
+                    "quantita": 40,
+                    "unita_descrizione": "g Destrosio"
+                },
+                {
+                    "quantita": 35,
+                    "unita_descrizione": "g Latte magro in polvere"
+                },
+                {
+                    "quantita": 5,
+                    "unita_descrizione": "g Neutro per gelato"
+                }
+            ]
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Gusto frutta polposa (pesca, albicocca, banana, ecc.)",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 300,
+                    "unita_descrizione": "g Purea di frutta"
+                },
+                {
+                    "quantita": 400,
+                    "unita_descrizione": "g Latte fresco intero"
+                },
+                {
+                    "quantita": 100,
+                    "unita_descrizione": "g Panna fresca liquida 35% grassi min."
+                },
+                {
+                    "quantita": 120,
+                    "unita_descrizione": "g Zucchero semolato (saccarosio)"
+                },
+                {
+                    "quantita": 40,
+                    "unita_descrizione": "g Destrosio"
+                },
+                {
+                    "quantita": 35,
+                    "unita_descrizione": "g Latte magro in polvere"
+                },
+                {
+                    "quantita": 5,
+                    "unita_descrizione": "g Neutro per gelato"
+                }
+            ]
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Gusto frutti di bosco",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 300,
+                    "unita_descrizione": "g Purea di frutta (passata)"
+                },
+                {
+                    "quantita": 360,
+                    "unita_descrizione": "g Latte fresco intero"
+                },
+                {
+                    "quantita": 100,
+                    "unita_descrizione": "g Panna fresca liquida 35% grassi min."
+                },
+                {
+                    "quantita": 160,
+                    "unita_descrizione": "g Zucchero semolato (saccarosio)"
+                },
+                {
+                    "quantita": 40,
+                    "unita_descrizione": "g Destrosio"
+                },
+                {
+                    "quantita": 35,
+                    "unita_descrizione": "g Latte magro in polvere"
+                },
+                {
+                    "quantita": 5,
+                    "unita_descrizione": "g Neutro per gelato"
+                }
+            ]
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Gusto Cioccolato fondente",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 100,
+                    "unita_descrizione": "g Cioccolato fondente 70% sciolto"
+                },
+                {
+                    "quantita": 630,
+                    "unita_descrizione": "g Latte fresco intero"
+                },
+                {
+                    "quantita": 170,
+                    "unita_descrizione": "g Zucchero semolato (saccarosio)"
+                },
+                {
+                    "quantita": 50,
+                    "unita_descrizione": "g Destrosio"
+                },
+                {
+                    "quantita": 45,
+                    "unita_descrizione": "g Latte magro in polvere"
+                },
+                {
+                    "quantita": 5,
+                    "unita_descrizione": "g Neutro per gelato"
+                }
+            ]
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Gusto Cioccolato al latte (o gianduia)",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 120,
+                    "unita_descrizione": "g Cioccolato al latte 35-40% sciolto"
+                },
+                {
+                    "quantita": 630,
+                    "unita_descrizione": "g Latte fresco intero"
+                },
+                {
+                    "quantita": 150,
+                    "unita_descrizione": "g Zucchero semolato (saccarosio)"
+                },
+                {
+                    "quantita": 50,
+                    "unita_descrizione": "g Destrosio"
+                },
+                {
+                    "quantita": 45,
+                    "unita_descrizione": "g Latte magro in polvere"
+                },
+                {
+                    "quantita": 5,
+                    "unita_descrizione": "g Neutro per gelato"
+                }
+            ]
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "g Cioccolato bianco sciolto",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 150,
+                    "unita_descrizione": "g Cioccolato bianco sciolto"
+                },
+                {
+                    "quantita": 650,
+                    "unita_descrizione": "g Latte fresco intero"
+                },
+                {
+                    "quantita": 100,
+                    "unita_descrizione": "g Zucchero semolato (saccarosio)"
+                },
+                {
+                    "quantita": 50,
+                    "unita_descrizione": "g Destrosio"
+                },
+                {
+                    "quantita": 45,
+                    "unita_descrizione": "g Latte magro in polvere"
+                },
+                {
+                    "quantita": 5,
+                    "unita_descrizione": "g Neutro per gelato"
+                }
+            ]
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Gusto frutta secca",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 90,
+                    "unita_descrizione": "g Pasta pura di frutta secca (nocciola, pistacchio, ecc..)"
+                },
+                {
+                    "quantita": 630,
+                    "unita_descrizione": "g Latte fresco intero"
+                },
+                {
+                    "quantita": 40,
+                    "unita_descrizione": "g Panna fresca liquida 35% grassi min."
+                },
+                {
+                    "quantita": 150,
+                    "unita_descrizione": "g Zucchero semolato (saccarosio)"
+                },
+                {
+                    "quantita": 50,
+                    "unita_descrizione": "g Destrosio"
+                },
+                {
+                    "quantita": 35,
+                    "unita_descrizione": "g Latte magro in polvere"
+                },
+                {
+                    "quantita": 5,
+                    "unita_descrizione": "g Neutro per gelato"
+                }
+            ]
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In una boule, mescolare accuratamente con una frusta il saccarosio, il destrosio, il latte magro in polvere e il neutro.",
+            "icona": "mescolare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "In un pentolino, scaldare il latte e la panna (se prevista dalla variante) portandoli a circa 40°C",
+            "icona": "pentolino",
+            "temperatura": "40°C"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Versare le polveri a pioggia nei liquidi caldi frullando con un mixer a immersione.",
+            "icona": "pimer"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Unire l'eventuale cioccolato o pasta di frutta secca e emulsionare fino ad ottenere un composto liscio e omogeneo.",
+            "opzionale": true,
+            "icona": "pimer"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "Portare la miscela a 85°C mescolando continuamente.",
+            "icona": "pentolino",
+            "temperatura": "85°C"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Se serve, emulsionare nuovamente poi abbattere in positivo a +4°C con pellicola a contatto",
+            "icona": "frigorifero",
+            "temperatura": "+4°C"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Prima di versare nel mantecatore, unire la purea di frutta emulsionando per rendere la miscela omogenea.",
+            "opzionale": true,
+            "icona": "pimer"
+        }
+    ]
+}
