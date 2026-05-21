@@ -95,7 +95,8 @@
         {
           "nome_sottocategoria": "Frolle",
           "preparazioni": [
-            { "id": "frolla_milano", "nome": "Pasta frolla Milano", "url_dati": "data/ricette/frolla_milano.json", "anno": "1, 2, 3", "tag": "crostata, biscotti, frollini, burro" },
+            { "id": "frolla_milano", "nome": "Pasta frolla Milano e variante integrale (metodo classico)", "url_dati": "data/ricette/frolla_milano.json", "anno": "1, 2, 3", "tag": "crostata, biscotti, frollini, burro" },
+            { "id": "frolla_comune", "nome": "Pasta frolla comune (e variante integrale)", "url_dati": "data/ricette/frolla_comune.json", "anno": "1, 2, 3", "tag": "crostata, biscotti, frollini, burro", "data_inserimento": "2026-05-20" },
             { "id": "frolla_cotturabianco", "nome": "Pasta frolla per cottura in bianco", "url_dati": "data/ricette/frolla_cotturabianco.json", "anno": "3, 4, 5", "tag": "crostata, sablè, biscotti" },
             { "id": "frolla_glutenlactosefree", "nome": "Pasta frolla senza glutine, senza lattosio", "url_dati": "data/ricette/frolla_glutenlactosefree.json", "anno": "3, 4, 5", "tag": "crostata, biscotti" },
             { "id": "frolla_salata_tecnica", "nome": "Pasta frolla salata tecnica", "url_dati": "data/ricette/frolla_salata_tecnica.json", "anno": "5", "tag": "burro, aperitivo, antipasto" },
@@ -173,7 +174,9 @@
             { "id": "cream_tart", "nome": "Cream Tart", "url_dati": "data/ricette/cream_tart.json", "anno": "3, 4", "tag": "frolla, sablè, sablé, sable" },
             { "id": "sacher_moderna", "nome": "Torta sacher moderna", "url_dati": "data/ricette/sacher_moderna.json", "anno": "3, 4, 5", "tag": "" },
             { "id": "sacher_tradizionale", "nome": "Torta sacher tradizionale", "url_dati": "data/ricette/sacher_tradizionale.json", "anno": "3, 4, 5", "tag": "" },
-            { "id": "glassacioccolato", "nome": "Glassa al cioccolato (metodo sciroppo e metodo ganache)", "url_dati": "data/ricette/glassacioccolato.json", "anno": "3, 4, 5", "tag": "" }
+            { "id": "glassacioccolato", "nome": "Glassa al cioccolato (metodo sciroppo e metodo ganache)", "url_dati": "data/ricette/glassacioccolato.json", "anno": "3, 4, 5", "tag": "" },
+            { "id": "carrot_cake", "nome": "Carrot Cake", "url_dati": "data/ricette/carrot_cake.json", "anno": "3", "tag": "", "data_inserimento": "2026-05-20" },
+            { "id": "strudel_mele", "nome": "Strudel di mele sfogliato", "url_dati": "data/ricette/strudel_mele.json", "anno": "2, 3", "tag": "", "data_inserimento": "2026-05-20" }
           ]
         },
         {
@@ -193,6 +196,7 @@
         { "nome_sottocategoria": "Cioccolato e pralineria", "preparazioni": [] },
         { "nome_sottocategoria": "Gelati, sorbetti e creme ghiacciate", "preparazioni": [
           { "id": "gelato_crema", "nome": "Gelato base crema (e varianti)", "url_dati": "data/ricette/gelato_crema.json", "anno": "3, 4, 5", "tag": "", "data_inserimento": "2026-05-12" },
+          { "id": "gelato_fiordilatte", "nome": "Gelato base fiordilatte (e varianti)", "url_dati": "data/ricette/gelato_fiordilatte", "anno": "3, 4, 5", "tag": "", "data_inserimento": "2026-05-12" },
           { "id": "sorbetto_frutta", "nome": "Sorbetto base frutta", "url_dati": "data/ricette/sorbetto_frutta.json", "anno": "3, 4, 5", "tag": "", "data_inserimento": "2026-05-12" },
           { "id": "granita", "nome": "Granita ricetta base", "url_dati": "data/ricette/granita.json", "anno": "tutti", "tag": "", "data_inserimento": "2026-05-12" },
           { "id": "parfait_caffe", "nome": "Parfait al caffè (e varianti)", "url_dati": "data/ricette/parfait_caffe.json", "anno": "3, 4, 5", "tag": "", "data_inserimento": "2026-05-12" },

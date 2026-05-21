@@ -1,13 +1,49 @@
 {
   "id": "frolla_milano",
-  "titolo": "Pasta frolla Milano (metodo classico)",
+  "titolo": "Pasta frolla Milano e variante integrale (metodo classico)",
       "ingredienti": 
    [
     { "quantita": 250, "unita_descrizione": "g Farina debole" },
     { "quantita": 125, "unita_descrizione": "g Burro" },
-    { "quantita": 125, "unita_descrizione": "g Zucchero" },
+    { "quantita": 125, "unita_descrizione": "g Zucchero a velo" },
     { "quantita": 50, "unita_descrizione": "g Uova" },
-    { "quantita": null, "unita_descrizione": "Aromi a piacere (vaniglia, limone, ecc.)" }
+    { "quantita": null, "unita_descrizione": "Aromi a piacere (vaniglia, limone, ecc.)" 
+  },
+  {
+            "quantita": null,
+            "unita_descrizione": "Frolla Milano integrale",
+            "sotto_ingredienti": [
+                {
+                    "quantita": 125,
+                    "unita_descrizione": "g Farina di tipo 00"
+                },
+                {
+                    "quantita": 125,
+                    "unita_descrizione": "g Farina integrale"
+                },
+                {
+                    "quantita": 125,
+                    "unita_descrizione": "g Burro"
+                },
+                {
+                    "quantita": 125,
+                    "unita_descrizione": "g Zucchero a velo"
+                },
+                {
+                    "quantita": 55,
+                    "unita_descrizione": "g Uova"
+                },
+                {
+                    "quantita": 1,
+                    "unita_descrizione": "g Sale (1 pizzico)"
+                },
+                {
+                    "quantita": null,
+                    "unita_descrizione": "Aromi (limone, arancia, vaniglia, ecc.)"
+                }
+            ]
+        }
+    
     ],
   "procedimento": [
     { "step_id": "step-1", "testo": "Nella planetaria munita di foglia (o a mano): impastare il burro a pomata con lo zucchero", "icona": "foglia", "velocita": "media"},

@@ -1,0 +1,136 @@
+{
+    "id": "strudel_mele",
+    "titolo": "Strudel di mele sfogliato",
+    "nota_dosi": "per uno strudel lungo 50cm circa. 10-12 porzioni",
+    "ingredienti": [
+        {
+            "quantita": null,
+            "unita_descrizione": "Per la pasta matta"
+        },
+        {
+            "quantita": 250,
+            "unita_descrizione": "g Farina 00 (o 50% farina 00 e 50% manitoba)"
+        },
+        {
+            "quantita": 130,
+            "unita_descrizione": "ml Acqua"
+        },
+        {
+            "quantita": 15,
+            "unita_descrizione": "g Olio extravergine di oliva"
+        },
+        {
+            "quantita": 3,
+            "unita_descrizione": "g Sale fino"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per il ripieno"
+        },
+        {
+            "quantita": 1500,
+            "unita_descrizione": "g Mele golden"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Zucchero semolato"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Pangrattato"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Burro"
+        },
+        {
+            "quantita": 80,
+            "unita_descrizione": "g Uvetta"
+        },
+        {
+            "quantita": 40,
+            "unita_descrizione": "g Pinoli"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "n° Limone"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Cannella in polvere"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Zucchero a velo"
+        },
+        {
+            "quantita": 40,
+            "unita_descrizione": "g Burro per spennellare la pasta stesa"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "In planetaria munita di gancio, versare tutti gli ingredienti per la pasta e far girare fino ad ottenere un impasto setoso (o impastare a mano).",
+            "icona": "gancio"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "Ungersi le mani e massaggiare la pasta per ricoprirla di olio e lasciare riposare a temperatura ambiente per almeno 2 ore (o coprire con pellicola e far riposare in frigorifero tutta la notte).",
+            "icona": "riposo",
+            "tempo": "2-8 ore"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Ammollare l’uvetta in acqua (o rum)",
+            "icona": "lavare"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Pelare e tagliare le mele a fette sottili e mettere in una ciotola con un po’ di succo di limone e lo zucchero.",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "In una padella far sciogliere il burro e quando sciolto versare il pangrattato e la scorza di limone, far insaporire, spegnere e mettere da parte.",
+            "icona": "padella"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Stendere la pasta sopra un lenzuolo pulito iniziando con il mattarello per aiutarsi. La pasta dovrà essere così sottile da vedere la mano sotto.",
+            "icona": "mattarello"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Spennellare la pasta con burro fuso.",
+            "icona": "spennellare"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Versare sulla pasta il pan grattato.",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Distribuire le mele (scolate dall’acqua che si sarà formata), l’uvetta, i pinoli e spolverare con poca cannella.",
+            "icona": "aggiungere"
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Aiutandosi con un torcione pulito, far rotolare su se stessa la pasta creando un grosso rotolo.",
+            "icona": "impastare_mano"
+        },
+        {
+            "step_id": "step-11",
+            "testo": "Spennellare con burro fuso e cuocere in forno a 180°C finchè la pasta non sarà dorata (circa 30-35 minuti).",
+            "icona": "forno_statico",
+            "temperatura": "180°C",
+            "tempo": "30-35 min"
+        },
+        {
+            "step_id": "step-12",
+            "testo": "Lasciare intiepidire e spolverare con zucchero a velo.",
+            "icona": "setacciare"
+        }
+    ]
+}

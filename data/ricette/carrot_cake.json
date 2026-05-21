@@ -1,0 +1,129 @@
+{
+    "id": "carrot_cake",
+    "titolo": "Carrot Cake",
+    "nota_dosi": "per 2 tortiere da 20 cm",
+    "ingredienti": [
+        {
+            "quantita": 125,
+            "unita_descrizione": "g Farina 00"
+        },
+        {
+            "quantita": 135,
+            "unita_descrizione": "g Uova medie"
+        },
+        {
+            "quantita": 95,
+            "unita_descrizione": "g Zucchero semolato"
+        },
+        {
+            "quantita": 45,
+            "unita_descrizione": "g Zucchero di canna"
+        },
+        {
+            "quantita": 120,
+            "unita_descrizione": "ml Olio di semi di girasole"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Carote"
+        },
+        {
+            "quantita": 45,
+            "unita_descrizione": "g Noci pecan tostate (o noci normali) tritate"
+        },
+        {
+            "quantita": 7,
+            "unita_descrizione": "g Succo di limone"
+        },
+        {
+            "quantita": 3,
+            "unita_descrizione": "g Cannella in polvere"
+        },
+        {
+            "quantita": 7,
+            "unita_descrizione": "g Bicarbonato di sodio"
+        },
+        {
+            "quantita": 4,
+            "unita_descrizione": "g Lievito per dolci"
+        },
+        {
+            "quantita": 1,
+            "unita_descrizione": "g Sale (un pizzico)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Per il frosting"
+        },
+        {
+            "quantita": 400,
+            "unita_descrizione": "g Formaggio spalmabile freddo di frigo"
+        },
+        {
+            "quantita": 65,
+            "unita_descrizione": "ml Panna fresca liquida fredda"
+        },
+        {
+            "quantita": 135,
+            "unita_descrizione": "g Zucchero a velo"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Sbucciare e grattugiare le carote finemente (il peso netto deve essere almeno 165g). Mescolare subito con il succo di limone.",
+            "icona": "tagliare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "In planetaria (frusta), montare uova, zucchero semolato, zucchero di canna e vaniglia (5-10 min) fino ad ottenere un composto spumoso.",
+            "icona": "frusta",
+            "tempo": "5-10 min.",
+            "velocita": "media-alta"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Aggiungere l'olio a filo continuando a montare.",
+            "icona": "frusta",
+            "velocita": "media-alta"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Abbassare al minimo e unire carote e noci facendo girare il tempo necessario solo per amalgamare il tutto.",
+            "icona": "frusta",
+            "velocita": "minimo"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "A parte setacciare la farina, il lievito, il bicarbonato, il sale e la cannella. Unire in planetaria mescolando lo stretto necessario.",
+            "icona": "setacciare"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Dividere in 2 tortiere imburrate (circa 360-370 g l'una).",
+            "icona": "porzionare"
+        },
+        {
+            "step_id": "step-7",
+            "testo": "Cuocere a 180°C statico per 20-25 min (temperatura al cuore di 94°C). Sfornare e raffreddare completamente prima di sformare.",
+            "icona": "forno_statico",
+            "temperatura": "180°C",
+            "tempo": "20-24 min (94°C cuore)"
+        },
+        {
+            "step_id": "step-8",
+            "testo": "Mettere formaggio e panna freddissimi in planetaria con lo zucchero a velo.",
+            "icona": "frusta"
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Montare con la frusta controllando a vista. Fermarsi appena il composto è sodo. Se montate troppo, l'acqua del formaggio si separa dal grasso e la crema diventa liquida.",
+            "icona": "frusta"
+        },
+        {
+            "step_id": "step-10",
+            "testo": "Trasferire in sac-à-poche e farcire i dischi ormai freddi sovrapponendoli uno sull’altro. (la torta si può lasciare nude con frosting solo dentro e sopra oppure rivestire anche i lati in maniera grezza",
+            "icona": "sac"
+        }
+    ]
+}

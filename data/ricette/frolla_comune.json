@@ -1,0 +1,45 @@
+{
+    "id": "frolla_comune",
+    "titolo": "Pasta frolla comune (e variante integrale)",
+    "nota_dosi": "per una tortiera da 24 cm (500g circa di frolla)",
+    "ingredienti": [
+        {
+            "quantita": 250,
+            "unita_descrizione": "g Farina 00 debole (o 50% 00 e 50% integrale)"
+        },
+        {
+            "quantita": 125,
+            "unita_descrizione": "g Burro"
+        },
+        {
+            "quantita": 100,
+            "unita_descrizione": "g Zucchero semolato"
+        },
+        {
+            "quantita": 60,
+            "unita_descrizione": "g Uova"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Sale (1 pizzico)"
+        },
+        {
+            "quantita": null,
+            "unita_descrizione": "Aromi (limone, arancia, vaniglia, ecc.)"
+        }
+    ],
+      "procedimento": [
+    { "step_id": "step-1", "testo": "Nella planetaria munita di foglia (o a mano): impastare il burro a pomata con lo zucchero", "icona": "foglia", "velocita": "media"},
+    { "step_id": "step-2", "testo": "Unire le uova poco per volta", "icona": "aggiungere" },
+    { "step_id": "step-3", "testo": "Aggiungere la farina in due volte.", "icona": "aggiungere" },
+    { "step_id": "step-4", "testo": "Stendere a uno spessore di 5mm tra due fogli di carta da forno", "icona": "mattarello", "dimensione": "5 mm"},
+    { "step_id": "step-5", "testo": "Mettere a riposare in frigorifero per 2 ore.", "icona":"frigorifero", "tempo": "2 ore" },
+    { "step_id": "step-6", "testo": "Dare alla frolla la forma desiderata.", "icona":"forma" },
+    { "step_id": "step-7", "testo": "Cuocere a 160-170°C", "icona": "forno_statico", "temperatura": "160-170°C" },
+    { "tipo": "bivio", "rami": [
+        { "step_id": "step-8a", "testo": "Un biscotto cuoce in 8-10 minuti.", "testo_nodo": "Biscotti", "tempo": "8-10 min"},
+        { "step_id": "step-8b", "testo": "Un fondo di crostata cuoce in bianco 14-16 minuti.", "testo_nodo": "Fondo crostata", "tempo": "14-16 min"}
+      ]
+    }
+  ]
+}
