@@ -196,7 +196,7 @@
         { "nome_sottocategoria": "Cioccolato e pralineria", "preparazioni": [] },
         { "nome_sottocategoria": "Gelati, sorbetti e creme ghiacciate", "preparazioni": [
           { "id": "gelato_crema", "nome": "Gelato base crema (e varianti)", "url_dati": "data/ricette/gelato_crema.json", "anno": "3, 4, 5", "tag": "", "data_inserimento": "2026-05-12" },
-          { "id": "gelato_fiordilatte", "nome": "Gelato base fiordilatte (e varianti)", "url_dati": "data/ricette/gelato_fiordilatte", "anno": "3, 4, 5", "tag": "", "data_inserimento": "2026-05-12" },
+          { "id": "gelato_fiordilatte", "nome": "Gelato base fiordilatte (e varianti)", "url_dati": "data/ricette/gelato_fiordilatte", "anno": "3, 4, 5", "tag": "estate", "data_inserimento": "2026-05-12" },
           { "id": "sorbetto_frutta", "nome": "Sorbetto base frutta", "url_dati": "data/ricette/sorbetto_frutta.json", "anno": "3, 4, 5", "tag": "", "data_inserimento": "2026-05-12" },
           { "id": "granita", "nome": "Granita ricetta base", "url_dati": "data/ricette/granita.json", "anno": "tutti", "tag": "", "data_inserimento": "2026-05-12" },
           { "id": "parfait_caffe", "nome": "Parfait al caffè (e varianti)", "url_dati": "data/ricette/parfait_caffe.json", "anno": "3, 4, 5", "tag": "", "data_inserimento": "2026-05-12" },
