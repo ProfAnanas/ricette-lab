@@ -149,7 +149,8 @@
             { "id": "pasticcera_salata", "nome": "Crema pasticcera salata", "url_dati": "data/ricette/pasticcera_salata.json", "anno": "3, 4, 5", "tag": "" },
             { "id": "semolino", "nome": "Semolino (e variante al cacao)", "url_dati": "data/ricette/semolino.json", "anno": "2, 3", "tag": "piemonte, piemontese" },
             { "id": "cremoso_fruttasecca", "nome": "Cremoso al cioccolato e pasta di frutta secca", "url_dati": "data/ricette/cremoso_fruttasecca.json", "anno": "3, 4", "tag": "" },
-            { "id": "cremoso", "nome": "Cremoso al cioccolato (e varianti)", "url_dati": "data/ricette/cremoso.json", "anno": "3, 4", "tag": "" }
+            { "id": "cremoso", "nome": "Cremoso al cioccolato (e varianti)", "url_dati": "data/ricette/cremoso.json", "anno": "3, 4", "tag": "" },
+            { "id": "cremoso_limone", "nome": "Cremoso al limone", "url_dati": "data/ricette/cremoso_limone.json", "anno": "3, 4", "tag": "", "data_inserimento": "2026-06-02" }
           ]
         },
         { "nome_sottocategoria": "Masse montate", "preparazioni": [

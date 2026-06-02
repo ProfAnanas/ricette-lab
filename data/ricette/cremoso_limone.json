@@ -1,0 +1,92 @@
+{
+    "id": "cremoso_limone",
+    "titolo": "Cremoso al limone",
+    "nota_dosi": "per riempire 80-100 tartellette o 2 crostate da 22-24cm",
+    "ingredienti": [
+        {
+            "quantita": 280,
+            "unita_descrizione": "g Succo di limone (filtrato"
+        },
+        {
+            "quantita": 200,
+            "unita_descrizione": "g Uova intere"
+        },
+        {
+            "quantita": 80,
+            "unita_descrizione": "g Tuorli"
+        },
+        {
+            "quantita": 180,
+            "unita_descrizione": "g Zucchero semolato"
+        },
+        {
+            "quantita": 400,
+            "unita_descrizione": "g Cioccolato bianco tritato finemente"
+        },
+        {
+            "quantita": 8,
+            "unita_descrizione": "g Gelatina in fogli 200 bloom"
+        },
+        {
+            "quantita": 4,
+            "unita_descrizione": "n° Limoni dalla buccia edibile per la scorza"
+        }
+    ],
+    "procedimento": [
+        {
+            "step_id": "step-1",
+            "testo": "Idratare la gelatina in acqua fredda.",
+            "icona": "lavare"
+        },
+        {
+            "step_id": "step-2",
+            "testo": "In un pentolino, unire il succo di limone, le scorze grattugiate, le uova intere, i tuorli e lo zucchero semolato. Mescolare bene con una frusta per amalgamare.",
+            "icona": "pentolino"
+        },
+        {
+            "step_id": "step-3",
+            "testo": "Portare il pentolino sul fuoco a fiamma dolce e cuocere il composto mescolando continuamente fino a raggiungere 82-84°C.",
+            "icona": "pentolino",
+            "temperatura": "82-84°C"
+        },
+        {
+            "step_id": "step-4",
+            "testo": "Togliere immediatamente dal fuoco, unire la gelatina ben strizzata e mescolare finché non sarà completamente sciolta.",
+            "icona": "montare"
+        },
+        {
+            "step_id": "step-5",
+            "testo": "In una caraffa stretta e alta mettere il cioccolato bianco tritato quindi versare il liquido caldo sul cioccolato.",
+            "icona": "versare"
+        },
+        {
+            "step_id": "step-6",
+            "testo": "Attendere un minuto per dare tempo al calore di iniziare a fondere il cioccolato, poi emulsionare tutto con un frullatore a immersione. Fare attenzione a tenere la campana del frullatore ben sommersa per evitare di inglobare bolle d'aria.",
+            "icona": "pimer"
+        },
+        {
+            "tipo": "bivio",
+            "rami": [
+                {
+                    "step_id": "step-8a",
+                    "testo": "Per utilizzarlo subito: quando il cremoso ha raggiunto una temperatura di circa 35-40°C ed è ancora ben fluido, colarlo direttamente nei gusci di frolla.",
+                    "icona": "versare",
+                    "temperatura": "35-40°C"
+                },
+                {
+                    "step_id": "step-8b",
+                    "testo": "Abbattere in positivo con pellicola a contatto.",
+                    "icona": "frigorifero",
+                    "temperatura": "+4°C"
+                }
+            ]
+        },
+        {
+            "step_id": "step-9",
+            "testo": "Riscaldare il cremoso al microonde o a bagnomaria fino a raggiungere i 35-40°C quindi usarlo per farcire tartellette o gusci di frolla.",
+            "condizione": "b",
+            "icona": "versare",
+            "temperatura": "35-40°C"
+        }
+    ]
+}
